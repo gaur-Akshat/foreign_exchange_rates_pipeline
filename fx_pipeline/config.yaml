@@ -1,0 +1,18 @@
+base_currency: USD
+
+target_currencies:
+  - EUR
+  - GBP
+  - JPY
+  - INR
+  - CAD
+  - AUD
+
+api:
+  url: https://api.frankfurter.app/latest
+  timeout: 10
+
+data:
+  bronze_path: data/bronze/
+  silver_path: data/silver/
+  gold_path: data/gold/
