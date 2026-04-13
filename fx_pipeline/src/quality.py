@@ -1,12 +1,8 @@
-"""Lightweight data quality checks between layers."""
-
 import pandas as pd
 
 
 def validate_not_empty(df: pd.DataFrame) -> bool:
     """
-    Ensure the DataFrame has at least one row.
-
     Args:
         df: Data to validate.
 
@@ -18,8 +14,6 @@ def validate_not_empty(df: pd.DataFrame) -> bool:
 
 def validate_required_columns(df: pd.DataFrame, columns: list) -> bool:
     """
-    Check that all expected column names are present.
-
     Args:
         df: Data to validate.
         columns: List of required column names.
