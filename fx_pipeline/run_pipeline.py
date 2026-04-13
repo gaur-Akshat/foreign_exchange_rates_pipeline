@@ -1,7 +1,7 @@
-"""Entry point: run the FX data pipeline from the project root."""
+from src.extract import extract_data
+import yaml
 
-from src.pipeline import run_pipeline
+with open(".config.yaml") as f:
+    config = yaml.safe_load(f)
 
-
-if __name__ == "__main__":
-    run_pipeline()
+extract_data(config)
