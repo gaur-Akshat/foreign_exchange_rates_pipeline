@@ -1,6 +1,9 @@
 import os
 import json
 import pandas as pd
+import logging
+
+logger = logging.getLogger(__name__)
 
 def read_bronze_files(config):
     bronze_path = config['data']['bronze_path']
@@ -39,7 +42,10 @@ def transform_record(bronze_json):
 
 def transform_data(config):
     '''transform all bronze files into silver tables'''
+    logger.info("Reading Bronze files")
     files = read_bronze_files(config)
+    logger.info(f"Found {len(files)} Bronze files")
+
     all_rows = []
     for file in files:
         with open(file, 'r') as f:
@@ -53,6 +59,7 @@ def transform_data(config):
     return df
 
 def save_silver(df, config):
+    logger.info(f"Saving {len(df)} records to Silver layer")
     silver_path = config["data"]["silver_path"]
     output_file = os.path.join(silver_path, "exchange_rates.parquet")
     df.to_parquet(output_file, index=False)

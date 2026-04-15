@@ -2,6 +2,9 @@ import requests
 import json
 import os
 from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def generate_batch_id():
@@ -10,25 +13,30 @@ def generate_batch_id():
 
 
 def fetch_latest(config):
+    logger.info("Fetching latest exchange rates")
     url = config['api']['url']
     base = config['base_currency']
     target = ",".join(config['target_currencies'])
 
-    response = requests.get(f"{url}?from={base}&symbols={target}")
+    timeout = config['api'].get('timeout', 10)
+    response = requests.get(f"{url}?from={base}&symbols={target}", timeout=timeout)
     return response
 
 
 def fetch_historical(config, start_date, end_date):
+    logger.info(f"Fetching historical data from {start_date} to {end_date}")
     base = config['base_currency']
     target = ",".join(config['target_currencies'])
 
     url = f"https://api.frankfurter.app/{start_date}..{end_date}?from={base}&symbols={target}"
 
-    response = requests.get(url)
+    timeout = config['api'].get('timeout', 10)
+    response = requests.get(url, timeout=timeout)
     return response
 
 
 def save_bronze(data, metadata, config, date_str):
+    logger.info(f"Saving Bronze data for {date_str}")
     bronze_path = config["data"]["bronze_path"]
 
     os.makedirs(bronze_path, exist_ok=True)
@@ -44,7 +52,8 @@ def save_bronze(data, metadata, config, date_str):
         json.dump(bronze_record, f, indent=2)
 
 
-def extract_data(config, start_date="2026-03-15", end_date="2026-04-13"):
+def extract_data(config, start_date=None, end_date=None):
+    logger.info("Starting extraction process")
     batch_id = generate_batch_id()
     ingestion_time = datetime.now().isoformat()
 

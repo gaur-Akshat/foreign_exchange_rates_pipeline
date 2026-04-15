@@ -1,0 +1,30 @@
+2026-04-16 00:36:28,796 - src.pipeline - INFO - Pipeline started
+2026-04-16 00:36:28,825 - src.extract - INFO - Starting extraction process
+2026-04-16 00:36:28,825 - src.extract - INFO - Fetching historical data from 2026-03-17 to 2026-04-16
+2026-04-16 00:36:30,382 - src.extract - INFO - Saving Bronze data for 2026-03-17
+2026-04-16 00:36:30,384 - src.extract - INFO - Saving Bronze data for 2026-03-18
+2026-04-16 00:36:30,385 - src.extract - INFO - Saving Bronze data for 2026-03-19
+2026-04-16 00:36:30,386 - src.extract - INFO - Saving Bronze data for 2026-03-20
+2026-04-16 00:36:30,387 - src.extract - INFO - Saving Bronze data for 2026-03-23
+2026-04-16 00:36:30,388 - src.extract - INFO - Saving Bronze data for 2026-03-24
+2026-04-16 00:36:30,390 - src.extract - INFO - Saving Bronze data for 2026-03-25
+2026-04-16 00:36:30,392 - src.extract - INFO - Saving Bronze data for 2026-03-26
+2026-04-16 00:36:30,393 - src.extract - INFO - Saving Bronze data for 2026-03-27
+2026-04-16 00:36:30,394 - src.extract - INFO - Saving Bronze data for 2026-03-30
+2026-04-16 00:36:30,396 - src.extract - INFO - Saving Bronze data for 2026-03-31
+2026-04-16 00:36:30,399 - src.extract - INFO - Saving Bronze data for 2026-04-01
+2026-04-16 00:36:30,401 - src.extract - INFO - Saving Bronze data for 2026-04-02
+2026-04-16 00:36:30,404 - src.extract - INFO - Saving Bronze data for 2026-04-07
+2026-04-16 00:36:30,406 - src.extract - INFO - Saving Bronze data for 2026-04-08
+2026-04-16 00:36:30,408 - src.extract - INFO - Saving Bronze data for 2026-04-09
+2026-04-16 00:36:30,411 - src.extract - INFO - Saving Bronze data for 2026-04-10
+2026-04-16 00:36:30,416 - src.extract - INFO - Saving Bronze data for 2026-04-13
+2026-04-16 00:36:30,417 - src.extract - INFO - Saving Bronze data for 2026-04-14
+2026-04-16 00:36:30,418 - src.extract - INFO - Saving Bronze data for 2026-04-15
+2026-04-16 00:36:30,423 - src.pipeline - INFO - Starting transformation
+2026-04-16 00:36:30,424 - src.transform - INFO - Reading Bronze files
+2026-04-16 00:36:30,424 - src.transform - INFO - Found 20 Bronze files
+2026-04-16 00:36:30,624 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-16 00:36:30,644 - src.pipeline - INFO - Transformation completed
+2026-04-16 00:36:30,644 - src.pipeline - INFO - Applying retention policy
+2026-04-16 00:36:30,686 - src.pipeline - INFO - Pipeline completed successfully
