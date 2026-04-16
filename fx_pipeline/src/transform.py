@@ -26,7 +26,6 @@ def transform_record(bronze_json):
     ingestion_time = metadata['ingestion_time']
     batch_id = metadata['batch_id']
 
-
     for currency, rate in rates.items():
         rows.append({
             "rate_date": date,
@@ -38,7 +37,6 @@ def transform_record(bronze_json):
         })
 
     return rows
-
 
 def transform_data(config):
     '''transform all bronze files into silver tables'''
@@ -63,5 +61,3 @@ def save_silver(df, config):
     silver_path = config["data"]["silver_path"]
     output_file = os.path.join(silver_path, "exchange_rates.parquet")
     df.to_parquet(output_file, index=False)
-
-    
