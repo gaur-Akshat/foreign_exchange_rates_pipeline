@@ -16,3 +16,16 @@ data:
   bronze_path: data/bronze/
   silver_path: data/silver/
   gold_path: data/gold/
+  logs: logs/
+
+pipeline:
+  backfill_days: 30
+  retention_days: 30
+
+database:
+  table_silver: "silver_exchange_rates"
+  table_gold_summary: "gold_exchange_rate_summary"
+  table_gold_trends: "gold_exchange_rate_trends"
+
+logging:
+  level: "INFO"

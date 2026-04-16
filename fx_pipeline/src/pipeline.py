@@ -5,6 +5,9 @@ import os
 
 from src.extract import extract_data
 from src.transform import transform_data, save_silver
+from src.load import load_to_sql, load_gold_to_sql
+from src.gold import process_gold_layer
+
 
 from src.logger import setup_logging
 logger = logging.getLogger(__name__)
@@ -58,6 +61,14 @@ def run_pipeline(config):
         df = transform_data(config)
         save_silver(df, config)
         logger.info("Transformation completed")
+        logger.info("Loading to SQL")
+        load_to_sql(df)
+        # layer gold
+        logger.info("Starting Gold layer processing")
+        summary_df, trends_df = process_gold_layer(df, config)
+        logger.info("Loading Gold layer to SQL")
+        load_gold_to_sql(summary_df, trends_df)
+        
         logger.info("Applying retention policy")
         apply_retention_policy(config)
 
