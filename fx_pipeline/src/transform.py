@@ -1,63 +1,79 @@
-import os
 import json
-import pandas as pd
 import logging
+from pathlib import Path
+
+import pandas as pd
+
+from src.quality import validate_bronze_file, validate_silver_data
 
 logger = logging.getLogger(__name__)
 
 def read_bronze_files(config):
-    bronze_path = config['data']['bronze_path']
-    files = [
-        os.path.join(bronze_path, f)
-        for f in os.listdir(bronze_path) if f.endswith('.json')
-    ]
-
-    return files
+    bronze_path = (Path(config.get("_project_root", ".")) / config["data"]["bronze_path"]).resolve()
+    return sorted(bronze_path.glob("*.json"))
 
 def transform_record(bronze_json):
-    '''convert json into table'''
-
     rows = []
-    metadata = bronze_json['metadata']
-    data = bronze_json['data']
-    base = data['base']
-    date = data['date']
-    rates = data['rates']
-    ingestion_time = metadata['ingestion_time']
-    batch_id = metadata['batch_id']
+
+    metadata = bronze_json.get("metadata", {})
+    payload = bronze_json["data"]
+
+    base_currency = payload["base"]
+    rate_date = payload["date"]
+    rates = payload["rates"]
 
     for currency, rate in rates.items():
         rows.append({
-            "rate_date": date,
-            "base_currency": base,
+            "rate_date": rate_date,
+            "base_currency": base_currency,
             "target_currency": currency,
             "exchange_rate": rate,
-            "ingestion_time": ingestion_time,
-            "batch_id": batch_id
+            "ingestion_time": metadata.get("ingestion_time"),
+            "load_batch_id": metadata.get("load_batch_id") or metadata.get("batch_id"),
+            "endpoint_name": metadata.get("endpoint"),
+            "response_status": metadata.get("status"),
         })
 
     return rows
 
 def transform_data(config):
-    '''transform all bronze files into silver tables'''
+    """Transform all Bronze files into Silver tables."""
     logger.info("Reading Bronze files")
     files = read_bronze_files(config)
-    logger.info(f"Found {len(files)} Bronze files")
+    logger.info("Found %s Bronze files", len(files))
+
+    if not files:
+        raise ValueError("No Bronze files found. Run extraction before transformation.")
 
     all_rows = []
-    for file in files:
-        with open(file, 'r') as f:
-            bronze_json = json.load(f)
-        
-        rows = transform_record(bronze_json)
-        all_rows.extend(rows)
+    for file_path in files:
+        if config.get("pipeline", {}).get("enable_bronze_validation", True):
+            validate_bronze_file(str(file_path))
+
+        with Path(file_path).open("r", encoding="utf-8") as handle:
+            bronze_json = json.load(handle)
+
+        all_rows.extend(transform_record(bronze_json))
+
     df = pd.DataFrame(all_rows)
-    df["rate_date"] = pd.to_datetime(df["rate_date"])
+    df["rate_date"] = pd.to_datetime(df["rate_date"]).dt.normalize()
     df["ingestion_time"] = pd.to_datetime(df["ingestion_time"])
+    df["exchange_rate"] = pd.to_numeric(df["exchange_rate"])
+    df = df.sort_values(
+        by=["rate_date", "base_currency", "target_currency", "ingestion_time"]
+    )
+    df = df.drop_duplicates(
+        subset=["rate_date", "base_currency", "target_currency"], keep="last"
+    ).reset_index(drop=True)
+
+    if config.get("pipeline", {}).get("enable_silver_validation", True):
+        validate_silver_data(df)
+
     return df
 
 def save_silver(df, config):
-    logger.info(f"Saving {len(df)} records to Silver layer")
-    silver_path = config["data"]["silver_path"]
-    output_file = os.path.join(silver_path, "exchange_rates.parquet")
+    logger.info("Saving %s records to Silver layer", len(df))
+    silver_path = (Path(config.get("_project_root", ".")) / config["data"]["silver_path"]).resolve()
+    silver_path.mkdir(parents=True, exist_ok=True)
+    output_file = silver_path / "exchange_rates.parquet"
     df.to_parquet(output_file, index=False)
