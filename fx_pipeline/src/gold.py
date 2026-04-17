@@ -1,50 +1,92 @@
 import pandas as pd
-import logging
 import os
+import logging
 
 logger = logging.getLogger(__name__)
 
-def create_monthly_summary(df):
-    df['rate_date'] = pd.to_datetime(df['rate_date'])
-    df['year_month'] = df['rate_date'].dt.to_period('M').dt.to_timestamp()
-    
-    summary_df = df.groupby(['year_month', 'base_currency', 'target_currency']).agg(
-        avg_rate=('exchange_rate', 'mean'),
-        min_rate=('exchange_rate', 'min'),
-        max_rate=('exchange_rate', 'max'),
-        volatility=('exchange_rate', 'std')
-    ).reset_index()
-    
-    summary_df['volatility'] = summary_df['volatility'].fillna(0)
-    
-    return summary_df
+def daily_rates(df):
+    return df.sort_values(["rate_date", "target_currency"]).reset_index(drop=True)
 
-def create_daily_trends(df):
-    df['rate_date'] = pd.to_datetime(df['rate_date'])
-    df = df.sort_values(by=['base_currency', 'target_currency', 'rate_date'])
-    
-    grouped = df.groupby(['base_currency', 'target_currency'])    
-    df['rate_7d_avg'] = grouped['exchange_rate'].transform(lambda x: x.rolling(window=7, min_periods=1).mean())
-    df['rate_30d_avg'] = grouped['exchange_rate'].transform(lambda x: x.rolling(window=30, min_periods=1).mean())
-    df['daily_pct_change'] = grouped['exchange_rate'].transform(lambda x: x.pct_change() * 100)
-    
-    df['daily_pct_change'] = df['daily_pct_change'].fillna(0)
-    
+def currency_movement(df):
+    df = df.sort_values(["target_currency", "rate_date"])
+    df["previous_rate"] = df.groupby("target_currency")["exchange_rate"].shift(1)
+    df["absolute_movement"] = df["exchange_rate"] - df["previous_rate"]
+    df["percentage_movement"] = (
+        df["absolute_movement"] / df["previous_rate"]
+    ) * 100
+    df.fillna(
+        {
+            "previous_rate": df["exchange_rate"],
+            "absolute_movement": 0.0,
+            "percentage_movement": 0.0,
+        },
+        inplace=True,
+    )
+
     return df
 
-def process_gold_layer(df, config):
-    logger.info("Processing Gold layer")
-    
-    gold_path = config['data']['gold_path']
+def weekly_summary(df):
+    df = df.sort_values(["target_currency", "rate_date"])
+    latest_date = df["rate_date"].max()
+    last_7_days = df[df["rate_date"] >= latest_date - pd.Timedelta(days=6)]
+
+    summary = last_7_days.groupby("target_currency").agg(
+        weekly_avg=("exchange_rate", "mean"),
+        weekly_high=("exchange_rate", "max"),
+        weekly_low=("exchange_rate", "min"),
+        start_rate=("exchange_rate", "first"),
+        end_rate=("exchange_rate", "last"),
+    ).reset_index()
+
+    summary["weekly_change"] = summary["end_rate"] - summary["start_rate"]
+    summary["weekly_pct_change"] = (
+        summary["weekly_change"] / summary["start_rate"]
+    ) * 100
+
+    summary["weekly_pct_change"] = summary["weekly_pct_change"].fillna(0.0)
+
+    return summary
+
+def strength_ranking(df):
+    df = df.sort_values("weekly_pct_change", ascending=False)
+    df["rank"] = df["weekly_pct_change"].rank(ascending=False).astype(int)
+
+    return df
+
+def conversion_table(df):
+    latest = df.sort_values("rate_date").groupby("target_currency").tail(1)
+    units = [1, 10, 100, 1000]
+    rows = []
+    for _, row in latest.iterrows():
+        for u in units:
+            rows.append({
+                "target_currency": row["target_currency"],
+                "base_amount": u,
+                "converted_amount": u * row["exchange_rate"],
+            })
+
+    return pd.DataFrame(rows)
+
+def run_gold_layer(df, config):
+    logger.info("Running Gold Layer")
+    gold_path = config["data"]["gold_path"]
     os.makedirs(gold_path, exist_ok=True)
-    
-    logger.info("Generating Monthly Summary")
-    summary_df = create_monthly_summary(df.copy())
-    summary_df.to_parquet(os.path.join(gold_path, "gold_rate_monthly_summary.parquet"), index=False)
-    
-    logger.info("Generating Daily Trends")
-    trends_df = create_daily_trends(df.copy())
-    trends_df.to_parquet(os.path.join(gold_path, "gold_rate_daily_trends.parquet"), index=False)
-    
-    logger.info("Gold layer processing complete")
-    return summary_df, trends_df
+
+    daily = daily_rates(df)
+    movement = currency_movement(daily.copy())
+    weekly = weekly_summary(daily.copy())
+    ranking = strength_ranking(weekly.copy())
+    conversion = conversion_table(daily.copy())
+    datasets = {
+        "gold_daily_currency_rates": daily,
+        "gold_currency_movement": movement,
+        "gold_weekly_currency_summary": weekly,
+        "gold_strength_rankings": ranking,
+        "gold_conversion_reference": conversion,
+    }
+    for name, data in datasets.items():
+        path = os.path.join(gold_path, f"{name}.parquet")
+        data.to_parquet(path, index=False)
+        logger.info(f"Saved {name}")
+
+    return datasets

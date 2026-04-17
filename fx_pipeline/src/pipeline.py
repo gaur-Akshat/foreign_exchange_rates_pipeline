@@ -1,79 +1,67 @@
 import logging
-import pandas as pd
 from datetime import datetime, timedelta
-import os
 
 from src.extract import extract_data
 from src.transform import transform_data, save_silver
-from src.load import load_to_sql, load_gold_to_sql
-from src.gold import process_gold_layer
-
-
+from src.gold import run_gold_layer
 from src.logger import setup_logging
+
 logger = logging.getLogger(__name__)
 
-def apply_retention_policy(config, days=30):
-    s_path = config['data']['silver_path']
-    file_path = os.path.join(s_path, "exchange_rates.parquet")
 
-    if not os.path.exists(file_path):
-        return
+def apply_retention(df, days):
+    import pandas as pd
 
-    df = pd.read_parquet(file_path)
+    if not days:
+        return df
 
-    df['rate_date'] = pd.to_datetime(df['rate_date'])
-    cutoff = datetime.today() - timedelta(days=days)
-    df_new = df[df['rate_date'] >= cutoff]
-    df_new.to_parquet(file_path, index=False)
+    cutoff = pd.Timestamp.today().normalize() - pd.Timedelta(days=days - 1)
+    return df[df["rate_date"] >= cutoff].reset_index(drop=True)
 
-def get_latest_bronze_date(bronze_path):
-    files = [f for f in os.listdir(bronze_path) if f.endswith(".json")]
-    if not files:
-        return None
-    dates = [
-        f.replace("exchange_rates_", "").replace(".json", "")
-        for f in files
-    ]
-    return max(dates)
 
 def run_pipeline(config):
-    setup_logging()
+    setup_logging(config)
     logger.info("Pipeline started")
+
     try:
-        bronze_path = config['data']['bronze_path']
-        latest_date = get_latest_bronze_date(bronze_path)
         today = datetime.today().date()
+        backfill_days = config["pipeline"]["backfill_days"]
+        retention_days = config["pipeline"]["retention_days"]
+        run_mode = config.get("pipeline", {}).get("run_mode", "auto")
 
-        if latest_date is None:
-            logger.info("First run → backfill last 30 days")
-            start_date = today - timedelta(days=30)
-            extract_data(config, start_date, today)
+        if run_mode == "reprocess":
+            logger.info("Reprocess mode enabled. Skipping API extraction.")
         else:
-            logger.info("Incremental run")
-            start_date = datetime.strptime(latest_date, "%Y-%m-%d").date() + timedelta(days=1)
+            # extract
+            start_date = today - timedelta(days=backfill_days - 1)
+            logger.info(f"Extracting data from {start_date} to {today}")
+            extract_data(config, start_date, today)
 
-            if start_date <= today:
-                logger.info(f"Fetching data from {start_date} to {today}")
-                extract_data(config, start_date, today)
-            else:
-                logger.info("No new data to fetch")
-        logger.info("Starting transformation")
+        # transform
+        logger.info("Transforming data")
         df = transform_data(config)
-        save_silver(df, config)
-        logger.info("Transformation completed")
-        logger.info("Loading to SQL")
-        load_to_sql(df)
-        # layer gold
-        logger.info("Starting Gold layer processing")
-        summary_df, trends_df = process_gold_layer(df, config)
-        logger.info("Loading Gold layer to SQL")
-        load_gold_to_sql(summary_df, trends_df)
-        
+
+        # retention
         logger.info("Applying retention policy")
-        apply_retention_policy(config)
+        df = apply_retention(df, retention_days)
+
+        # silver
+        save_silver(df, config)
+
+        # gold
+        logger.info("Processing Gold layer")
+        gold_data = run_gold_layer(df, config)
+
+        # sql load
+        if config.get("database", {}).get("enabled", False):
+            from src.load import load_to_sql, load_gold_to_sql
+
+            logger.info("Loading data to SQL Server")
+            load_to_sql(df, config)
+            load_gold_to_sql(gold_data, config)
 
         logger.info("Pipeline completed successfully")
-        
+
     except Exception as e:
-        logger.error(f"Pipeline failed: {str(e)}", exc_info=True)
+        logger.error(f"Pipeline failed: {e}", exc_info=True)
         raise

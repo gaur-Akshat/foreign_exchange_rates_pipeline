@@ -1,78 +1,125 @@
-# Foreign Exchange (FX) Data Pipeline
+# Foreign Exchange Rate Analytics Pipeline
 
-This is a local Data Engineering project that implements a robust, automated data pipeline for extracting, transforming, and loading Foreign Exchange (FX) rates. The project adopts the **Medallion Architecture** (Bronze → Silver → Gold) to ensure data quality, auditability, and analytical readiness.
+This project implements a local Bronze -> Silver -> Gold data pipeline for exchange-rate analytics using the Frankfurter API. It preserves raw API responses in Bronze, validates and standardizes row-level currency data in Silver, and publishes Gold marts for daily reporting, movement analysis, weekly summaries, strength rankings, and conversion references.
 
+## Problem Statement
 
-- **Automated Incremental Loading**: Intelligently interrogates local storage to detect the latest ingestion date. Triggers a 30-day historical backfill on first run, and delta incremental loads on subsequent runs.
-- **Medallion Architecture**: Strict separation of data tiers ensuring raw data is never lost and downstream transformations are reproducible.
-- **Metadata Tagging**: All raw API payloads are enriched with ingestion timestamps, HTTP status codes, and generated batch IDs for end-to-end lineage tracking.
-- **Data Normalization (JSON to Tabular)**: Utilizes `pandas` to unnest dynamic JSON dictionaries into strict, typed relational structures.
-- **Optimized Storage**: Saves Silver layer data as partitioned columnar **Parquet** files, drastically improving disk space and query speeds.
-- **Data Lifecycle Management**: Features an automated retention policy that gracefully prunes Silver layer records older than the designated 30-day window.
-- **Resiliency & Logging**: Comprehensive logging via the `src.logger` module ensures all extraction, transformation, and retention events are captured for easy debugging.
+A finance analytics team needs a lightweight local system to monitor exchange rates without manually checking websites. The pipeline must preserve raw API responses, create a trusted historical dataset, and generate reusable analytics outputs for reporting and trend analysis.
 
+## Architecture
 
-1. **Bronze Layer (`data/bronze/`)**: Acts as an immutable land-zone. Raw JSON from the [Frankfurter API](https://www.frankfurter.app/) is stored strictly as it is received, appended with metadata.
-2. **Silver Layer (`data/silver/`)**: The raw JSON is processed and flattened. Currencies are unpivoted into columns: `rate_date`, `base_currency`, `target_currency`, and `exchange_rate`. Data types are enforced, and the result is saved as a Parquet dataset.
-3. **Gold Layer (`data/gold/`)**: *(Planned Phase)* Will host curated views, moving-averages, and BI-ready aggregates based off the Silver tables.
+- Bronze: raw API payloads are stored with ingestion metadata in `data/bronze/exchange_rates/`.
+- Silver: validated, flattened currency records are stored as Parquet in `data/silver/exchange_rates/`.
+- Gold: analytics-ready marts are stored as Parquet in `data/gold/marts/`.
 
+## Project Structure
 
 ```text
 fx_pipeline/
-│
-├── config.yaml          # Configuration settings (API URL, base/target currencies)
-├── main.py              # Main entry point to initialize the config and trigger pipeline
-├── requirements.txt     # Python dependencies (requests, pandas, pyarrow, pyyaml)
-├── README.md            # Project documentation
-│
-├── data/                # Data storage directories
-│   ├── bronze/          # Immutable raw JSON files
-│   ├── silver/          # Cleaned, typed Parquet files
-│   └── gold/            # Final analytics-ready outputs (future)
-│
-├── logs/                # Local runtime logs
-│
-└── src/                 # Core pipeline modules
-    ├── logger.py        # Logging configuration
-    ├── extract.py       # API connection, pagination, & backfill logic
-    ├── transform.py     # JSON unnesting, pandas manipulation, Parquet writing
-    └── pipeline.py      # Orchestrator combining extract, transform, & retention
+|-- config/
+|   |-- config.yaml
+|-- data/
+|   |-- bronze/
+|   |   `-- exchange_rates/
+|   |-- silver/
+|   |   `-- exchange_rates/
+|   |-- gold/
+|   |   `-- marts/
+|   `-- logs/
+|-- notebooks/
+|   `-- gold_reporting.ipynb
+|-- src/
+|   |-- db.py
+|   |-- extract.py
+|   |-- gold.py
+|   |-- load.py
+|   |-- logger.py
+|   |-- pipeline.py
+|   |-- quality.py
+|   `-- transform.py
+|-- tests/
+|   |-- test_gold.py
+|   `-- test_quality.py
+|-- main.py
+|-- scheduler.bat
+`-- requirements.txt
 ```
 
+## Data Model
 
-- Python 3.8+
-- Virtual environment (recommended)
+Silver and Gold datasets are built around these fields:
 
+- `rate_date`
+- `base_currency`
+- `target_currency`
+- `exchange_rate`
+- `ingestion_time`
+- `load_batch_id`
 
-1. Clone or download the repository.
-2. Navigate to the project root directory (`fx_pipeline`).
-3. Set up a virtual environment and install the required dependencies:
+## Gold Outputs
+
+The pipeline writes the following Gold marts:
+
+- `gold_daily_currency_rates.parquet`
+- `gold_currency_movement.parquet`
+- `gold_weekly_currency_summary.parquet`
+- `gold_strength_rankings.parquet`
+- `gold_conversion_reference.parquet`
+
+## Quality Checks
+
+The pipeline validates:
+
+- Bronze schema presence for metadata, base, dates, and rates
+- Silver null checks on required business columns
+- Silver positive-rate checks
+- Silver uniqueness on `rate_date + base_currency + target_currency`
+- Silver freshness against the latest extracted Bronze snapshot
+
+## Setup
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Ensure your `config.yaml` is set up correctly. This file dictates your pipeline's target, for example:
-```yaml
-api:
-  url: "https://api.frankfurter.app/latest"
-  timeout: 10
-base_currency: "USD"
-target_currencies: 
-  - "EUR"
-  - "GBP"
-  - "JPY"
-data:
-  bronze_path: "data/bronze"
-  silver_path: "data/silver"
-```
+Update `config/config.yaml` to choose your base currency, target currencies, storage paths, and pipeline settings.
 
-Run the pipeline using `main.py`:
+## Running The Pipeline
+
+Default run:
 
 ```bash
 python main.py
 ```
 
-The pipeline will determine if it requires a backfill or an incremental fetch, process the data, perform retention cleanup, and log the entire process to your terminal and the `logs/` directory.
+Reprocess Bronze to Silver to Gold without calling the API:
+
+1. Set `pipeline.run_mode` to `reprocess` in `config/config.yaml`.
+2. Run `python main.py`.
+
+## Optional SQL Loading
+
+SQL loading is disabled by default. If you want to publish Silver and Gold tables to SQL Server, set `database.enabled: true` and provide the required environment variables:
+
+- `DB_USERNAME`
+- `DB_PASSWORD`
+- `DB_SERVER`
+- `DB_NAME`
+
+## Scheduling
+
+A minimal `scheduler.bat` script is included in the project root to facilitate daily automation via **Windows Task Scheduler**.
+It automatically activates the virtual environment, executes the pipeline, and redirects output to `data/logs/scheduler.log`.
+
+To schedule:
+1. Open Windows Task Scheduler.
+2. Create a Basic Task, set trigger to "Daily".
+3. Action: "Start a program".
+4. Browse and select `scheduler.bat`.
+5. Set "Start in" to the absolute path of the `fx_pipeline` directory.
+
+## Reporting
+
+Use [notebooks/gold_reporting.ipynb](/E:/Data_Engineering_First_Year_Project/foreign_exchange_rates_pipeline/fx_pipeline/notebooks/gold_reporting.ipynb) to explore Gold outputs and create charts or summary tables locally.
