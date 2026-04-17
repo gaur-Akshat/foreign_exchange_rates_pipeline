@@ -1,0 +1,121 @@
+2026-04-16 00:36:28,796 - src.pipeline - INFO - Pipeline started
+2026-04-16 00:36:28,825 - src.extract - INFO - Starting extraction process
+2026-04-16 00:36:28,825 - src.extract - INFO - Fetching historical data from 2026-03-17 to 2026-04-16
+2026-04-16 00:36:30,382 - src.extract - INFO - Saving Bronze data for 2026-03-17
+2026-04-16 00:36:30,384 - src.extract - INFO - Saving Bronze data for 2026-03-18
+2026-04-16 00:36:30,385 - src.extract - INFO - Saving Bronze data for 2026-03-19
+2026-04-16 00:36:30,386 - src.extract - INFO - Saving Bronze data for 2026-03-20
+2026-04-16 00:36:30,387 - src.extract - INFO - Saving Bronze data for 2026-03-23
+2026-04-16 00:36:30,388 - src.extract - INFO - Saving Bronze data for 2026-03-24
+2026-04-16 00:36:30,390 - src.extract - INFO - Saving Bronze data for 2026-03-25
+2026-04-16 00:36:30,392 - src.extract - INFO - Saving Bronze data for 2026-03-26
+2026-04-16 00:36:30,393 - src.extract - INFO - Saving Bronze data for 2026-03-27
+2026-04-16 00:36:30,394 - src.extract - INFO - Saving Bronze data for 2026-03-30
+2026-04-16 00:36:30,396 - src.extract - INFO - Saving Bronze data for 2026-03-31
+2026-04-16 00:36:30,399 - src.extract - INFO - Saving Bronze data for 2026-04-01
+2026-04-16 00:36:30,401 - src.extract - INFO - Saving Bronze data for 2026-04-02
+2026-04-16 00:36:30,404 - src.extract - INFO - Saving Bronze data for 2026-04-07
+2026-04-16 00:36:30,406 - src.extract - INFO - Saving Bronze data for 2026-04-08
+2026-04-16 00:36:30,408 - src.extract - INFO - Saving Bronze data for 2026-04-09
+2026-04-16 00:36:30,411 - src.extract - INFO - Saving Bronze data for 2026-04-10
+2026-04-16 00:36:30,416 - src.extract - INFO - Saving Bronze data for 2026-04-13
+2026-04-16 00:36:30,417 - src.extract - INFO - Saving Bronze data for 2026-04-14
+2026-04-16 00:36:30,418 - src.extract - INFO - Saving Bronze data for 2026-04-15
+2026-04-16 00:36:30,423 - src.pipeline - INFO - Starting transformation
+2026-04-16 00:36:30,424 - src.transform - INFO - Reading Bronze files
+2026-04-16 00:36:30,424 - src.transform - INFO - Found 20 Bronze files
+2026-04-16 00:36:30,624 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-16 00:36:30,644 - src.pipeline - INFO - Transformation completed
+2026-04-16 00:36:30,644 - src.pipeline - INFO - Applying retention policy
+2026-04-16 00:36:30,686 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-16 21:10:50,913 - src.pipeline - INFO - Pipeline started
+2026-04-16 21:10:50,940 - src.pipeline - INFO - Reprocess mode enabled. Skipping API extraction.
+2026-04-16 21:10:50,940 - src.pipeline - INFO - Starting transformation
+2026-04-16 21:10:50,940 - src.transform - INFO - Reading Bronze files
+2026-04-16 21:10:50,941 - src.transform - INFO - Found 20 Bronze files
+2026-04-16 21:10:50,970 - src.pipeline - INFO - Applying retention policy for 30 days
+2026-04-16 21:10:50,976 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-16 21:10:51,373 - src.pipeline - INFO - Transformation completed
+2026-04-16 21:10:51,373 - src.pipeline - INFO - Starting Gold layer processing
+2026-04-16 21:10:51,373 - src.gold - INFO - Processing Gold layer
+2026-04-16 21:10:51,410 - src.gold - INFO - Saving Gold mart gold_daily_currency_rates
+2026-04-16 21:10:51,422 - src.gold - INFO - Saving Gold mart gold_currency_movement
+2026-04-16 21:10:51,428 - src.gold - INFO - Saving Gold mart gold_weekly_currency_summary
+2026-04-16 21:10:51,437 - src.gold - INFO - Saving Gold mart gold_strength_rankings
+2026-04-16 21:10:51,446 - src.gold - INFO - Saving Gold mart gold_conversion_reference
+2026-04-16 21:10:51,451 - src.gold - INFO - Gold layer processing complete
+2026-04-16 21:10:51,451 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-16 23:51:48,417 - src.pipeline - INFO - Pipeline started
+2026-04-16 23:51:48,418 - src.pipeline - INFO - Extracting data from 2026-03-18 to 2026-04-16
+2026-04-16 23:51:48,418 - src.extract - INFO - Starting extraction process
+2026-04-16 23:51:48,418 - src.extract - INFO - Fetching historical data from 2026-03-18 to 2026-04-16
+2026-04-16 23:51:51,281 - src.extract - INFO - Saving Bronze data to exchange_rates_2026-03-18_to_2026-04-16.json
+2026-04-16 23:51:51,285 - src.pipeline - INFO - Transforming data
+2026-04-16 23:51:51,285 - src.transform - INFO - Reading Bronze files
+2026-04-16 23:51:51,286 - src.transform - INFO - Found 21 Bronze files
+2026-04-16 23:51:51,337 - src.pipeline - INFO - Applying retention policy
+2026-04-16 23:51:51,338 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-16 23:51:51,522 - src.pipeline - INFO - Processing Gold layer
+2026-04-16 23:51:51,523 - src.gold - INFO - Running Gold Layer
+2026-04-16 23:51:51,523 - src.pipeline - ERROR - Pipeline failed: 'paths'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 49, in run_pipeline
+    gold_data = run_gold_layer(df, config)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\gold.py", line 72, in run_gold_layer
+    gold_path = config["paths"]["gold"]
+                ~~~~~~^^^^^^^^^
+KeyError: 'paths'
+2026-04-16 23:56:27,093 - src.pipeline - INFO - Pipeline started
+2026-04-16 23:56:27,093 - src.pipeline - INFO - Extracting data from 2026-03-18 to 2026-04-16
+2026-04-16 23:56:27,093 - src.extract - INFO - Starting extraction process
+2026-04-16 23:56:27,093 - src.extract - INFO - Fetching historical data from 2026-03-18 to 2026-04-16
+2026-04-16 23:56:38,201 - src.extract - INFO - Saving Bronze data to exchange_rates_2026-03-18_to_2026-04-16.json
+2026-04-16 23:56:38,205 - src.pipeline - INFO - Transforming data
+2026-04-16 23:56:38,205 - src.transform - INFO - Reading Bronze files
+2026-04-16 23:56:38,206 - src.transform - INFO - Found 21 Bronze files
+2026-04-16 23:56:38,259 - src.pipeline - INFO - Applying retention policy
+2026-04-16 23:56:38,262 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-16 23:56:38,330 - src.pipeline - INFO - Processing Gold layer
+2026-04-16 23:56:38,331 - src.gold - INFO - Running Gold Layer
+2026-04-16 23:56:38,363 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-16 23:56:38,367 - src.gold - INFO - Saved gold_currency_movement
+2026-04-16 23:56:38,370 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-16 23:56:38,373 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-16 23:56:38,375 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-16 23:56:38,376 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-16 23:57:36,514 - src.pipeline - INFO - Pipeline started
+2026-04-16 23:57:36,514 - src.pipeline - INFO - Extracting data from 2026-03-18 to 2026-04-16
+2026-04-16 23:57:36,515 - src.extract - INFO - Starting extraction process
+2026-04-16 23:57:36,515 - src.extract - INFO - Fetching historical data from 2026-03-18 to 2026-04-16
+2026-04-16 23:57:42,890 - src.extract - INFO - Saving Bronze data to exchange_rates_2026-03-18_to_2026-04-16.json
+2026-04-16 23:57:42,895 - src.pipeline - INFO - Transforming data
+2026-04-16 23:57:42,895 - src.transform - INFO - Reading Bronze files
+2026-04-16 23:57:42,896 - src.transform - INFO - Found 21 Bronze files
+2026-04-16 23:57:42,919 - src.pipeline - INFO - Applying retention policy
+2026-04-16 23:57:42,920 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-16 23:57:42,943 - src.pipeline - INFO - Processing Gold layer
+2026-04-16 23:57:42,943 - src.gold - INFO - Running Gold Layer
+2026-04-16 23:57:42,959 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-16 23:57:42,963 - src.gold - INFO - Saved gold_currency_movement
+2026-04-16 23:57:42,966 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-16 23:57:42,969 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-16 23:57:42,972 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-16 23:57:42,972 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-16 23:58:50,423 - src.pipeline - INFO - Pipeline started
+2026-04-16 23:58:50,424 - src.pipeline - INFO - Extracting data from 2026-03-18 to 2026-04-16
+2026-04-16 23:58:50,424 - src.extract - INFO - Starting extraction process
+2026-04-16 23:58:50,424 - src.extract - INFO - Fetching historical data from 2026-03-18 to 2026-04-16
+2026-04-16 23:58:58,121 - src.extract - INFO - Saving Bronze data to exchange_rates_2026-03-18_to_2026-04-16.json
+2026-04-16 23:58:58,125 - src.pipeline - INFO - Transforming data
+2026-04-16 23:58:58,125 - src.transform - INFO - Reading Bronze files
+2026-04-16 23:58:58,126 - src.transform - INFO - Found 21 Bronze files
+2026-04-16 23:58:58,149 - src.pipeline - INFO - Applying retention policy
+2026-04-16 23:58:58,150 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-16 23:58:58,175 - src.pipeline - INFO - Processing Gold layer
+2026-04-16 23:58:58,176 - src.gold - INFO - Running Gold Layer
+2026-04-16 23:58:58,190 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-16 23:58:58,194 - src.gold - INFO - Saved gold_currency_movement
+2026-04-16 23:58:58,197 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-16 23:58:58,200 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-16 23:58:58,202 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-16 23:58:58,202 - src.pipeline - INFO - Pipeline completed successfully

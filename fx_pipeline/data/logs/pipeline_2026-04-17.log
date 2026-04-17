@@ -1,0 +1,722 @@
+2026-04-17 00:03:46,186 - src.pipeline - INFO - Pipeline started
+2026-04-17 00:03:46,186 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 00:03:46,186 - src.extract - INFO - Starting extraction process
+2026-04-17 00:03:46,186 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 00:03:47,546 - src.extract - INFO - Saving Bronze data to exchange_rates_2026-03-19_to_2026-04-17.json
+2026-04-17 00:03:47,549 - src.pipeline - INFO - Transforming data
+2026-04-17 00:03:47,549 - src.transform - INFO - Reading Bronze files
+2026-04-17 00:03:47,550 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 00:03:47,608 - src.pipeline - INFO - Applying retention policy
+2026-04-17 00:03:47,610 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-17 00:03:47,635 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 00:03:47,635 - src.gold - INFO - Running Gold Layer
+2026-04-17 00:03:47,678 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 00:03:47,682 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 00:03:47,684 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 00:03:47,689 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 00:03:47,692 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 00:03:47,692 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-17 00:46:31,550 - src.pipeline - INFO - Pipeline started
+2026-04-17 00:46:31,551 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 00:46:31,551 - src.extract - INFO - Starting extraction process
+2026-04-17 00:46:31,551 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 00:46:41,415 - src.extract - INFO - Saving Bronze data to exchange_rates_2026-03-19_to_2026-04-17.json
+2026-04-17 00:46:41,418 - src.pipeline - INFO - Transforming data
+2026-04-17 00:46:41,418 - src.transform - INFO - Reading Bronze files
+2026-04-17 00:46:41,419 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 00:46:41,465 - src.pipeline - INFO - Applying retention policy
+2026-04-17 00:46:41,468 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-17 00:46:41,540 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 00:46:41,540 - src.gold - INFO - Running Gold Layer
+2026-04-17 00:46:41,563 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 00:46:41,566 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 00:46:41,568 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 00:46:41,571 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 00:46:41,574 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 00:46:41,574 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-17 00:47:04,377 - src.pipeline - INFO - Pipeline started
+2026-04-17 00:47:04,377 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 00:47:04,377 - src.extract - INFO - Starting extraction process
+2026-04-17 00:47:04,377 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 00:47:13,725 - src.extract - INFO - Saving Bronze data to exchange_rates_2026-03-19_to_2026-04-17.json
+2026-04-17 00:47:13,728 - src.pipeline - INFO - Transforming data
+2026-04-17 00:47:13,728 - src.transform - INFO - Reading Bronze files
+2026-04-17 00:47:13,729 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 00:47:13,765 - src.pipeline - INFO - Applying retention policy
+2026-04-17 00:47:13,766 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-17 00:47:13,794 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 00:47:13,794 - src.gold - INFO - Running Gold Layer
+2026-04-17 00:47:13,812 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 00:47:13,821 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 00:47:13,828 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 00:47:13,831 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 00:47:13,834 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 00:47:13,834 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-17 16:35:45,237 - src.pipeline - INFO - Pipeline started
+2026-04-17 16:35:45,237 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 16:35:45,237 - src.extract - INFO - Starting extraction process
+2026-04-17 16:35:45,237 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 16:35:46,756 - src.extract - INFO - Saving Bronze data for 2026-03-19
+2026-04-17 16:35:46,758 - src.extract - INFO - Saving Bronze data for 2026-03-20
+2026-04-17 16:35:46,759 - src.extract - INFO - Saving Bronze data for 2026-03-23
+2026-04-17 16:35:46,760 - src.extract - INFO - Saving Bronze data for 2026-03-24
+2026-04-17 16:35:46,760 - src.extract - INFO - Saving Bronze data for 2026-03-25
+2026-04-17 16:35:46,761 - src.extract - INFO - Saving Bronze data for 2026-03-26
+2026-04-17 16:35:46,762 - src.extract - INFO - Saving Bronze data for 2026-03-27
+2026-04-17 16:35:46,763 - src.extract - INFO - Saving Bronze data for 2026-03-30
+2026-04-17 16:35:46,763 - src.extract - INFO - Saving Bronze data for 2026-03-31
+2026-04-17 16:35:46,764 - src.extract - INFO - Saving Bronze data for 2026-04-01
+2026-04-17 16:35:46,765 - src.extract - INFO - Saving Bronze data for 2026-04-02
+2026-04-17 16:35:46,765 - src.extract - INFO - Saving Bronze data for 2026-04-07
+2026-04-17 16:35:46,766 - src.extract - INFO - Saving Bronze data for 2026-04-08
+2026-04-17 16:35:46,767 - src.extract - INFO - Saving Bronze data for 2026-04-09
+2026-04-17 16:35:46,768 - src.extract - INFO - Saving Bronze data for 2026-04-10
+2026-04-17 16:35:46,769 - src.extract - INFO - Saving Bronze data for 2026-04-13
+2026-04-17 16:35:46,769 - src.extract - INFO - Saving Bronze data for 2026-04-14
+2026-04-17 16:35:46,770 - src.extract - INFO - Saving Bronze data for 2026-04-15
+2026-04-17 16:35:46,771 - src.extract - INFO - Saving Bronze data for 2026-04-16
+2026-04-17 16:35:46,775 - src.pipeline - INFO - Transforming data
+2026-04-17 16:35:46,775 - src.transform - INFO - Reading Bronze files
+2026-04-17 16:35:46,776 - src.transform - INFO - Found 23 Bronze files
+2026-04-17 16:35:46,793 - src.pipeline - ERROR - Pipeline failed: 'data'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 42, in run_pipeline
+    df = transform_data(config)
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\transform.py", line 56, in transform_data
+    all_rows.extend(transform_record(bronze_json))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\transform.py", line 19, in transform_record
+    payload = bronze_json["data"]
+              ~~~~~~~~~~~^^^^^^^^
+KeyError: 'data'
+2026-04-17 16:36:57,199 - src.pipeline - INFO - Pipeline started
+2026-04-17 16:36:57,199 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 16:36:57,199 - src.extract - INFO - Starting extraction process
+2026-04-17 16:36:57,199 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 16:36:58,598 - src.extract - INFO - Saving Bronze data for 2026-03-19
+2026-04-17 16:36:58,601 - src.extract - INFO - Saving Bronze data for 2026-03-20
+2026-04-17 16:36:58,602 - src.extract - INFO - Saving Bronze data for 2026-03-23
+2026-04-17 16:36:58,603 - src.extract - INFO - Saving Bronze data for 2026-03-24
+2026-04-17 16:36:58,603 - src.extract - INFO - Saving Bronze data for 2026-03-25
+2026-04-17 16:36:58,604 - src.extract - INFO - Saving Bronze data for 2026-03-26
+2026-04-17 16:36:58,605 - src.extract - INFO - Saving Bronze data for 2026-03-27
+2026-04-17 16:36:58,605 - src.extract - INFO - Saving Bronze data for 2026-03-30
+2026-04-17 16:36:58,606 - src.extract - INFO - Saving Bronze data for 2026-03-31
+2026-04-17 16:36:58,606 - src.extract - INFO - Saving Bronze data for 2026-04-01
+2026-04-17 16:36:58,607 - src.extract - INFO - Saving Bronze data for 2026-04-02
+2026-04-17 16:36:58,608 - src.extract - INFO - Saving Bronze data for 2026-04-07
+2026-04-17 16:36:58,608 - src.extract - INFO - Saving Bronze data for 2026-04-08
+2026-04-17 16:36:58,609 - src.extract - INFO - Saving Bronze data for 2026-04-09
+2026-04-17 16:36:58,610 - src.extract - INFO - Saving Bronze data for 2026-04-10
+2026-04-17 16:36:58,610 - src.extract - INFO - Saving Bronze data for 2026-04-13
+2026-04-17 16:36:58,611 - src.extract - INFO - Saving Bronze data for 2026-04-14
+2026-04-17 16:36:58,611 - src.extract - INFO - Saving Bronze data for 2026-04-15
+2026-04-17 16:36:58,613 - src.extract - INFO - Saving Bronze data for 2026-04-16
+2026-04-17 16:36:58,615 - src.pipeline - INFO - Transforming data
+2026-04-17 16:36:58,615 - src.transform - INFO - Reading Bronze files
+2026-04-17 16:36:58,616 - src.transform - INFO - Found 21 Bronze files
+2026-04-17 16:36:58,763 - src.pipeline - INFO - Applying retention policy
+2026-04-17 16:36:58,765 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-17 16:36:59,003 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 16:36:59,003 - src.gold - INFO - Running Gold Layer
+2026-04-17 16:36:59,020 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 16:36:59,024 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 16:36:59,026 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 16:36:59,028 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 16:36:59,030 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 16:36:59,030 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-17 22:28:45,489 - src.pipeline - INFO - Pipeline started
+2026-04-17 22:28:45,489 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 22:28:45,490 - src.extract - INFO - Starting extraction process
+2026-04-17 22:28:45,490 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 22:28:45,490 - src.pipeline - ERROR - Pipeline failed: 'url'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 38, in run_pipeline
+    extract_data(config, start_date, today)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 49, in extract_data
+    response = fetch_historical(config, start_date, end_date)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 25, in fetch_historical
+    base_url = config['api']['url']
+               ~~~~~~~~~~~~~^^^^^^^
+KeyError: 'url'
+2026-04-17 22:32:59,409 - src.pipeline - INFO - Pipeline started
+2026-04-17 22:32:59,409 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 22:32:59,409 - src.extract - INFO - Starting extraction process
+2026-04-17 22:32:59,410 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 22:33:03,208 - src.pipeline - ERROR - Pipeline failed: 404 Client Error: Not Found for url: https://api.frankfurter.dev/v1/latest/2026-03-19..2026-04-17?from=USD&symbols=EUR,GBP,JPY,INR,CAD,AUD
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 38, in run_pipeline
+    extract_data(config, start_date, today)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 49, in extract_data
+    response = fetch_historical(config, start_date, end_date)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 30, in fetch_historical
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\requests\models.py", line 1028, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://api.frankfurter.dev/v1/latest/2026-03-19..2026-04-17?from=USD&symbols=EUR,GBP,JPY,INR,CAD,AUD
+2026-04-17 22:34:07,734 - src.pipeline - INFO - Pipeline started
+2026-04-17 22:34:07,734 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 22:34:07,734 - src.extract - INFO - Starting extraction process
+2026-04-17 22:34:07,734 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 22:34:10,060 - src.pipeline - INFO - Transforming data
+2026-04-17 22:34:10,060 - src.transform - INFO - Reading Bronze files
+2026-04-17 22:34:10,071 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 22:34:10,225 - src.pipeline - INFO - Applying retention policy
+2026-04-17 22:34:10,230 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-17 22:34:10,438 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 22:34:10,438 - src.gold - INFO - Running Gold Layer
+2026-04-17 22:34:10,457 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 22:34:10,461 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 22:34:10,464 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 22:34:10,468 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 22:34:10,471 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 22:34:10,471 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-17 22:34:39,323 - src.pipeline - INFO - Pipeline started
+2026-04-17 22:34:39,324 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 22:34:39,324 - src.extract - INFO - Starting extraction process
+2026-04-17 22:34:39,324 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 22:34:41,106 - src.pipeline - INFO - Transforming data
+2026-04-17 22:34:41,107 - src.transform - INFO - Reading Bronze files
+2026-04-17 22:34:41,108 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 22:34:41,264 - src.pipeline - INFO - Applying retention policy
+2026-04-17 22:34:41,268 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-17 22:34:41,444 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 22:34:41,445 - src.gold - INFO - Running Gold Layer
+2026-04-17 22:34:41,466 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 22:34:41,470 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 22:34:41,474 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 22:34:41,478 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 22:34:41,481 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 22:34:41,481 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-17 22:40:48,285 - src.pipeline - INFO - Pipeline started
+2026-04-17 22:40:48,286 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 22:40:48,286 - src.extract - INFO - Starting extraction process
+2026-04-17 22:40:48,286 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 22:40:49,968 - src.pipeline - INFO - Transforming data
+2026-04-17 22:40:49,969 - src.transform - INFO - Reading Bronze files
+2026-04-17 22:40:49,970 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 22:40:50,109 - src.pipeline - INFO - Applying retention policy
+2026-04-17 22:40:50,110 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-17 22:40:50,127 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 22:40:50,127 - src.gold - INFO - Running Gold Layer
+2026-04-17 22:40:50,151 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 22:40:50,155 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 22:40:50,159 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 22:40:50,163 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 22:40:50,166 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 22:40:50,166 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-17 23:02:22,908 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:02:22,908 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:02:22,908 - src.extract - INFO - Starting extraction process
+2026-04-17 23:02:22,909 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:02:24,508 - src.pipeline - INFO - Transforming data
+2026-04-17 23:02:24,509 - src.transform - INFO - Reading Bronze files
+2026-04-17 23:02:24,510 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 23:02:24,670 - src.pipeline - INFO - Applying retention policy
+2026-04-17 23:02:24,704 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-17 23:02:24,748 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 23:02:24,751 - src.gold - INFO - Running Gold Layer
+2026-04-17 23:02:24,780 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 23:02:24,784 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 23:02:24,786 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 23:02:24,790 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 23:02:24,793 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 23:02:24,794 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-17 23:34:21,396 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:34:21,397 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:34:21,397 - src.extract - INFO - Starting extraction process
+2026-04-17 23:34:21,397 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:34:21,397 - src.pipeline - ERROR - Pipeline failed: 'historical_url'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 37, in run_pipeline
+    extract_data(config, start_date, today)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 49, in extract_data
+    response = fetch_historical(config, start_date, end_date)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 25, in fetch_historical
+    base_url = config['api']['historical_url']
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'historical_url'
+2026-04-17 23:34:32,656 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:34:32,656 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:34:32,656 - src.extract - INFO - Starting extraction process
+2026-04-17 23:34:32,656 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:34:32,657 - src.pipeline - ERROR - Pipeline failed: 'historical_url'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 37, in run_pipeline
+    extract_data(config, start_date, today)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 49, in extract_data
+    response = fetch_historical(config, start_date, end_date)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 25, in fetch_historical
+    base_url = config['api']['historical_url']
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'historical_url'
+2026-04-17 23:37:18,290 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:37:18,290 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:37:18,290 - src.extract - INFO - Starting extraction process
+2026-04-17 23:37:18,290 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:37:19,838 - src.pipeline - ERROR - Pipeline failed: 'bronze_path'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 37, in run_pipeline
+    extract_data(config, start_date, today)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 63, in extract_data
+    save_bronze(daily_data, metadata, config, date)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 34, in save_bronze
+    bronze_path = config["paths"]["bronze_path"]
+                  ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'bronze_path'
+2026-04-17 23:38:14,336 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:38:14,336 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:38:14,336 - src.extract - INFO - Starting extraction process
+2026-04-17 23:38:14,336 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:38:19,541 - src.pipeline - INFO - Transforming data
+2026-04-17 23:38:19,541 - src.transform - INFO - Reading Bronze files
+2026-04-17 23:38:19,542 - src.pipeline - ERROR - Pipeline failed: 'bronze_path'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 41, in run_pipeline
+    df = transform_data(config)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\transform.py", line 42, in transform_data
+    files = read_bronze_files(config)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\transform.py", line 11, in read_bronze_files
+    bronze_path = (Path(config.get("_project_root", ".")) / config["paths"]["bronze_path"]).resolve()
+                                                            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'bronze_path'
+2026-04-17 23:38:27,859 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:38:27,859 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:38:27,859 - src.extract - INFO - Starting extraction process
+2026-04-17 23:38:27,860 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:38:35,241 - src.pipeline - INFO - Transforming data
+2026-04-17 23:38:35,242 - src.transform - INFO - Reading Bronze files
+2026-04-17 23:38:35,243 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 23:38:35,393 - src.pipeline - INFO - Applying retention policy
+2026-04-17 23:38:35,396 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-17 23:38:35,396 - src.pipeline - ERROR - Pipeline failed: 'silver_path'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 48, in run_pipeline
+    save_silver(df, config)
+    ~~~~~~~~~~~^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\transform.py", line 77, in save_silver
+    silver_path = (Path(config.get("_project_root", ".")) / config["paths"]["silver_path"]).resolve()
+                                                            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'silver_path'
+2026-04-17 23:39:19,815 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:39:19,816 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:39:19,816 - src.extract - INFO - Starting extraction process
+2026-04-17 23:39:19,816 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:39:25,156 - src.pipeline - INFO - Transforming data
+2026-04-17 23:39:25,156 - src.transform - INFO - Reading Bronze files
+2026-04-17 23:39:25,157 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 23:39:25,285 - src.pipeline - INFO - Applying retention policy
+2026-04-17 23:39:25,287 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-17 23:39:25,319 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 23:39:25,320 - src.gold - INFO - Running Gold Layer
+2026-04-17 23:39:25,320 - src.pipeline - ERROR - Pipeline failed: 'gold_path'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 52, in run_pipeline
+    gold_data = run_gold_layer(df, config)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\gold.py", line 70, in run_gold_layer
+    gold_path = config["paths"]["gold_path"]
+                ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'gold_path'
+2026-04-17 23:41:44,984 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:41:44,985 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:41:44,985 - src.extract - INFO - Starting extraction process
+2026-04-17 23:41:44,985 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:41:49,928 - src.pipeline - INFO - Transforming data
+2026-04-17 23:41:49,928 - src.transform - INFO - Reading Bronze files
+2026-04-17 23:41:49,929 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 23:41:50,104 - src.pipeline - INFO - Applying retention policy
+2026-04-17 23:41:50,105 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-17 23:41:50,122 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 23:41:50,123 - src.gold - INFO - Running Gold Layer
+2026-04-17 23:41:50,159 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 23:41:50,163 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 23:41:50,166 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 23:41:50,169 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 23:41:50,172 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 23:41:50,172 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-17 23:49:01,256 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:49:01,257 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:49:01,257 - src.extract - INFO - Starting extraction process
+2026-04-17 23:49:01,257 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:49:02,885 - src.pipeline - INFO - Transforming data
+2026-04-17 23:49:02,885 - src.transform - INFO - Reading Bronze files
+2026-04-17 23:49:02,886 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 23:49:03,017 - src.pipeline - INFO - Applying retention policy
+2026-04-17 23:49:03,018 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-17 23:49:03,033 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 23:49:03,033 - src.gold - INFO - Running Gold Layer
+2026-04-17 23:49:03,056 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 23:49:03,059 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 23:49:03,062 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 23:49:03,066 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 23:49:03,068 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 23:49:03,407 - src.pipeline - INFO - Ensuring database exists
+2026-04-17 23:49:19,206 - src.pipeline - ERROR - Pipeline failed: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3317, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 59, in run_pipeline
+    create_database_if_not_exists()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\db.py", line 17, in create_database_if_not_exists
+    with engine.connect() as conn:
+         ~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3293, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, dialect, engine
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3317, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 23:50:18,787 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:50:18,787 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:50:18,787 - src.extract - INFO - Starting extraction process
+2026-04-17 23:50:18,788 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:50:30,217 - src.pipeline - ERROR - Pipeline failed: HTTPSConnectionPool(host='api.frankfurter.dev', port=443): Read timed out. (read timeout=10)
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+    ~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\connection.py", line 796, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+        sock=sock,
+    ...<14 lines>...
+        assert_fingerprint=self.assert_fingerprint,
+    )
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\connection.py", line 975, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+        sock=sock,
+    ...<8 lines>...
+        tls_in_tls=tls_in_tls,
+    )
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 483, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 527, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aksha\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Aksha\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Aksha\AppData\Local\Python\pythoncore-3.14-64\Lib\ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+TimeoutError: _ssl.c:1063: The handshake operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\util\retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+        self, url, f"Read timed out. (read timeout={timeout_value})"
+    ) from err
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.frankfurter.dev', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 37, in run_pipeline
+    extract_data(config, start_date, today)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 49, in extract_data
+    response = fetch_historical(config, start_date, end_date)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 29, in fetch_historical
+    response = requests.get(url, timeout=10)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\requests\sessions.py", line 727, in send
+    history = [resp for resp in gen]
+                                ^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\requests\sessions.py", line 266, in resolve_redirects
+    resp = self.send(
+        req,
+    ...<6 lines>...
+        **adapter_kwargs,
+    )
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\requests\adapters.py", line 691, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.frankfurter.dev', port=443): Read timed out. (read timeout=10)
+2026-04-17 23:56:43,620 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:56:43,620 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:56:43,620 - src.extract - INFO - Starting extraction process
+2026-04-17 23:56:43,620 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:56:43,620 - src.pipeline - ERROR - Pipeline failed: 'base_url'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 37, in run_pipeline
+    extract_data(config, start_date, today)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 57, in extract_data
+    response = fetch_historical(config, start_date, end_date)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\extract.py", line 25, in fetch_historical
+    base_url = config['api']['base_url']
+               ~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'base_url'
+2026-04-17 23:56:58,123 - src.pipeline - INFO - Pipeline started
+2026-04-17 23:56:58,123 - src.pipeline - INFO - Extracting data from 2026-03-19 to 2026-04-17
+2026-04-17 23:56:58,123 - src.extract - INFO - Starting extraction process
+2026-04-17 23:56:58,123 - src.extract - INFO - Fetching historical data from 2026-03-19 to 2026-04-17
+2026-04-17 23:57:12,325 - src.pipeline - INFO - Transforming data
+2026-04-17 23:57:12,325 - src.transform - INFO - Reading Bronze files
+2026-04-17 23:57:12,326 - src.transform - INFO - Found 22 Bronze files
+2026-04-17 23:57:12,458 - src.pipeline - INFO - Applying retention policy
+2026-04-17 23:57:12,460 - src.transform - INFO - Saving 120 records to Silver layer
+2026-04-17 23:57:12,479 - src.pipeline - INFO - Processing Gold layer
+2026-04-17 23:57:12,479 - src.gold - INFO - Running Gold Layer
+2026-04-17 23:57:12,500 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-17 23:57:12,504 - src.gold - INFO - Saved gold_currency_movement
+2026-04-17 23:57:12,507 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-17 23:57:12,510 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-17 23:57:12,512 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-17 23:57:12,743 - src.pipeline - INFO - Ensuring database exists
+2026-04-17 23:57:28,525 - src.pipeline - ERROR - Pipeline failed: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3317, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 59, in run_pipeline
+    create_database_if_not_exists()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\db.py", line 17, in create_database_if_not_exists
+    with engine.connect() as conn:
+         ~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3293, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, dialect, engine
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2448, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 143, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 3317, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 448, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1272, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\impl.py", line 175, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 389, in _create_connection
+    return _ConnectionRecord(self)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 900, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 121, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\create.py", line 667, in connect
+    return dialect.connect(*cargs_tup, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 630, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

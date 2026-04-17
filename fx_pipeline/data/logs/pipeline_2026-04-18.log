@@ -1,0 +1,58 @@
+2026-04-18 00:00:22,045 - src.pipeline - INFO - Pipeline started
+2026-04-18 00:00:22,046 - src.pipeline - INFO - Extracting data from 2026-03-20 to 2026-04-18
+2026-04-18 00:00:22,046 - src.extract - INFO - Starting extraction process
+2026-04-18 00:00:22,046 - src.extract - INFO - Fetching historical data from 2026-03-20 to 2026-04-18
+2026-04-18 00:00:28,071 - src.pipeline - INFO - Transforming data
+2026-04-18 00:00:28,072 - src.transform - INFO - Reading Bronze files
+2026-04-18 00:00:28,073 - src.transform - INFO - Found 22 Bronze files
+2026-04-18 00:00:28,228 - src.pipeline - INFO - Applying retention policy
+2026-04-18 00:00:28,234 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-18 00:00:28,301 - src.pipeline - INFO - Processing Gold layer
+2026-04-18 00:00:28,303 - src.gold - INFO - Running Gold Layer
+2026-04-18 00:00:28,330 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-18 00:00:28,334 - src.gold - INFO - Saved gold_currency_movement
+2026-04-18 00:00:28,338 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-18 00:00:28,341 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-18 00:00:28,345 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-18 00:00:28,857 - src.pipeline - INFO - Ensuring database exists
+2026-04-18 00:00:28,884 - src.pipeline - WARNING - Could not connect to SQL server. Skipping database load. Reason: No module named 'pyodbc'
+2026-04-18 00:00:28,884 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-18 00:01:28,753 - src.pipeline - INFO - Pipeline started
+2026-04-18 00:01:28,754 - src.pipeline - INFO - Extracting data from 2026-03-20 to 2026-04-18
+2026-04-18 00:01:28,754 - src.extract - INFO - Starting extraction process
+2026-04-18 00:01:28,754 - src.extract - INFO - Fetching historical data from 2026-03-20 to 2026-04-18
+2026-04-18 00:01:32,006 - src.pipeline - INFO - Transforming data
+2026-04-18 00:01:32,006 - src.transform - INFO - Reading Bronze files
+2026-04-18 00:01:32,007 - src.transform - INFO - Found 22 Bronze files
+2026-04-18 00:01:32,136 - src.pipeline - INFO - Applying retention policy
+2026-04-18 00:01:32,137 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-18 00:01:32,153 - src.pipeline - INFO - Processing Gold layer
+2026-04-18 00:01:32,154 - src.gold - INFO - Running Gold Layer
+2026-04-18 00:01:32,178 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-18 00:01:32,182 - src.gold - INFO - Saved gold_currency_movement
+2026-04-18 00:01:32,184 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-18 00:01:32,187 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-18 00:01:32,190 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-18 00:01:32,375 - src.pipeline - INFO - Ensuring database exists
+2026-04-18 00:01:48,148 - src.pipeline - WARNING - Could not connect to SQL server. Skipping database load. Reason: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Named Pipes Provider: Could not open a connection to SQL Server [2].  (2) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (2)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-18 00:01:48,149 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-18 00:13:03,645 - src.pipeline - INFO - Pipeline started
+2026-04-18 00:13:03,645 - src.pipeline - INFO - Extracting data from 2026-03-20 to 2026-04-18
+2026-04-18 00:13:03,645 - src.extract - INFO - Starting extraction process
+2026-04-18 00:13:03,646 - src.extract - INFO - Fetching historical data from 2026-03-20 to 2026-04-18
+2026-04-18 00:13:04,718 - src.pipeline - INFO - Transforming data
+2026-04-18 00:13:04,719 - src.transform - INFO - Reading Bronze files
+2026-04-18 00:13:04,720 - src.transform - INFO - Found 22 Bronze files
+2026-04-18 00:13:04,868 - src.pipeline - INFO - Applying retention policy
+2026-04-18 00:13:04,871 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-18 00:13:04,901 - src.pipeline - INFO - Processing Gold layer
+2026-04-18 00:13:04,902 - src.gold - INFO - Running Gold Layer
+2026-04-18 00:13:04,934 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-18 00:13:04,937 - src.gold - INFO - Saved gold_currency_movement
+2026-04-18 00:13:04,939 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-18 00:13:04,943 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-18 00:13:04,945 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-18 00:13:05,147 - src.pipeline - INFO - Ensuring database exists
+2026-04-18 00:13:05,382 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-18 00:13:05,622 - src.pipeline - INFO - Pipeline completed successfully

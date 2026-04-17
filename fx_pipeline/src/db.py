@@ -1,32 +1,32 @@
 import os
 
-def get_engine():
-    try:
-        from dotenv import load_dotenv
-    except ImportError:
-        load_dotenv = None
+from dotenv import load_dotenv
+from sqlalchemy import create_engine, text
 
-    try:
-        from sqlalchemy import create_engine
-    except ImportError as exc:
-        raise RuntimeError(
-            "SQL loading requires sqlalchemy. Install the optional database dependencies."
-        ) from exc
-
-    if load_dotenv is not None:
-        load_dotenv()
-
+def create_database_if_not_exists():
+    load_dotenv()
     username = os.getenv("DB_USERNAME")
-    password = os.getenv("DB_PASSWORD")
-    server = os.getenv("DB_SERVER")
+    password = os.getenv("DB_PASSWORD", "")
+    server = os.getenv("DB_SERVER", "localhost")
     database = os.getenv("DB_NAME")
 
-    if not all([username, password, server, database]):
-        raise RuntimeError("Database environment variables are not fully configured.")
+    # Connect to MySQL root to create the target database if it doesn't exist
+    sys_conn = f"mysql+mysqlconnector://{username}:{password}@{server}/"
+    engine = create_engine(sys_conn)
 
-    connection_string = (
-        f"mssql+pyodbc://{username}:{password}"
-        f"@{server}/{database}?driver=ODBC+Driver+17+for+SQL+Server"
-    )
+    with engine.connect() as conn:
+        conn.execute(text(f"CREATE DATABASE IF NOT EXISTS {database}"))
 
+    engine.dispose()
+
+def get_engine():
+    load_dotenv()
+    
+    username = os.getenv("DB_USERNAME")
+    password = os.getenv("DB_PASSWORD", "")
+    server = os.getenv("DB_SERVER", "localhost")
+    database = os.getenv("DB_NAME")
+
+    connection_string = f"mysql+mysqlconnector://{username}:{password}@{server}/{database}"
+    
     return create_engine(connection_string)

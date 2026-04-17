@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "batch_id": "fx_20260418_001303",
+    "ingestion_time": "2026-04-18T00:13:03.646120",
+    "endpoint": "historical",
+    "status": 200
+  },
+  "data": {
+    "base": "USD",
+    "date": "2026-04-17",
+    "rates": {
+      "AUD": 1.3934,
+      "CAD": 1.3672,
+      "EUR": 0.84767,
+      "GBP": 0.7389,
+      "INR": 92.82,
+      "JPY": 159.13
+    }
+  }
+}

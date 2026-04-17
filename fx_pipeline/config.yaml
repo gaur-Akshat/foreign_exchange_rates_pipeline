@@ -9,41 +9,22 @@ target_currencies:
   - AUD
 
 api:
-  latest_url: "https://api.frankfurter.app/latest"
-  historical_url: "https://api.frankfurter.app"
+  url: "https://api.frankfurter.app"
   timeout: 10
-  max_retries: 3
 
-data:
-  bronze_path: "data/bronze/exchange_rates"
-  silver_path: "data/silver/exchange_rates"
-  gold_path: "data/gold/marts"
-  logs_path: "data/logs"
+paths:
+  bronze: "data/bronze/exchange_rates"
+  silver: "data/silver/exchange_rates"
+  gold: "data/gold/marts"
+  logs: "data/logs"
 
 pipeline:
-  run_mode: "auto"
   backfill_days: 30
   retention_days: 30
-  enable_retention: true
-  enable_bronze_validation: true
-  enable_silver_validation: true
-
-gold:
-  conversion_units:
-    - 1
-    - 10
-    - 100
-    - 1000
 
 database:
-  enabled: false
+  enabled: true
   silver_table: "silver_exchange_rates"
-  gold_tables:
-    gold_daily_currency_rates: "gold_daily_currency_rates"
-    gold_currency_movement: "gold_currency_movement"
-    gold_weekly_currency_summary: "gold_weekly_currency_summary"
-    gold_strength_rankings: "gold_strength_rankings"
-    gold_conversion_reference: "gold_conversion_reference"
 
 logging:
   level: "INFO"

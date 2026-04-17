@@ -1,27 +1,23 @@
-from src.db import get_engine
+from src.db import get_engine, create_database_if_not_exists
 
 def load_to_sql(df, config):
-    table_name = config["database"]["silver_table"]
+    create_database_if_not_exists()
     engine = get_engine()
-
-    df = df.drop_duplicates(subset=["rate_date", "base_currency", "target_currency"])
-
+    table_name = config.get("database", {}).get("silver_table", "silver_exchange_rates")
+    
     df.to_sql(
         name=table_name,
         con=engine,
         if_exists="append",
-        index=False,
-        method="multi",
-        chunksize=1000,
+        index=False
     )
 
 def load_gold_to_sql(gold_marts, config):
-    table_mapping = config["database"]["gold_tables"]
     engine = get_engine()
+    
     for mart_name, mart_df in gold_marts.items():
-        table_name = table_mapping[mart_name]
         mart_df.to_sql(
-            name=table_name,
+            name=mart_name,
             con=engine,
             if_exists="replace",
             index=False,

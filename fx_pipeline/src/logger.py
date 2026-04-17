@@ -6,7 +6,7 @@ def setup_logging(config):
     if logging.getLogger().hasHandlers():
         logging.getLogger().handlers.clear()
 
-    logs_dir = (Path(config.get("_project_root", ".")) / config["data"]["logs_path"]).resolve()
+    logs_dir = (Path(config.get("_project_root", ".")) / config["paths"]["logs"]).resolve()
     logs_dir.mkdir(parents=True, exist_ok=True)
     log_file = logs_dir / f"pipeline_{datetime.today().date()}.log"
 

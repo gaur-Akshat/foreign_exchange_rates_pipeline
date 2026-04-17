@@ -8,7 +8,6 @@ from src.logger import setup_logging
 
 logger = logging.getLogger(__name__)
 
-
 def apply_retention(df, days):
     import pandas as pd
 
@@ -34,7 +33,7 @@ def run_pipeline(config):
         else:
             # extract
             start_date = today - timedelta(days=backfill_days - 1)
-            logger.info(f"Extracting data from {start_date} to {today}")
+            logger.info("Extracting data from %s to %s", start_date, today)
             extract_data(config, start_date, today)
 
         # transform
@@ -54,12 +53,17 @@ def run_pipeline(config):
 
         # sql load
         if config.get("database", {}).get("enabled", False):
+            from src.db import create_database_if_not_exists
             from src.load import load_to_sql, load_gold_to_sql
-
-            logger.info("Loading data to SQL Server")
-            load_to_sql(df, config)
-            load_gold_to_sql(gold_data, config)
-
+            
+            try:
+                logger.info("Ensuring database exists")
+                create_database_if_not_exists()
+                logger.info("Loading data to SQL Server")
+                load_to_sql(df, config)
+                load_gold_to_sql(gold_data, config)
+            except Exception as exc:
+                logger.warning(f"Could not connect to SQL server. Skipping database load. Reason: {exc}")
         logger.info("Pipeline completed successfully")
 
     except Exception as e:

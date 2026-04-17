@@ -2,7 +2,9 @@ __pycache__/
 *.pyc
 .venv/
 env/
-data/
-logs/
 .env
 .DS_Store
+data/logs/
+data/bronze/*
+!data/bronze/.gitkeep
+.pytest_cache/

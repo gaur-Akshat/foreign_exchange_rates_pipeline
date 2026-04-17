@@ -14,6 +14,7 @@ def currency_movement(df):
     df["percentage_movement"] = (
         df["absolute_movement"] / df["previous_rate"]
     ) * 100
+
     df.fillna(
         {
             "previous_rate": df["exchange_rate"],
@@ -39,10 +40,7 @@ def weekly_summary(df):
     ).reset_index()
 
     summary["weekly_change"] = summary["end_rate"] - summary["start_rate"]
-    summary["weekly_pct_change"] = (
-        summary["weekly_change"] / summary["start_rate"]
-    ) * 100
-
+    summary["weekly_pct_change"] = (summary["weekly_change"] / summary["start_rate"]) * 100
     summary["weekly_pct_change"] = summary["weekly_pct_change"].fillna(0.0)
 
     return summary
@@ -69,7 +67,7 @@ def conversion_table(df):
 
 def run_gold_layer(df, config):
     logger.info("Running Gold Layer")
-    gold_path = config["data"]["gold_path"]
+    gold_path = config["paths"]["gold"]
     os.makedirs(gold_path, exist_ok=True)
 
     daily = daily_rates(df)
@@ -78,7 +76,7 @@ def run_gold_layer(df, config):
     ranking = strength_ranking(weekly.copy())
     conversion = conversion_table(daily.copy())
     datasets = {
-        "gold_daily_currency_rates": daily,
+        "gold_daily_currency_rates": daily, 
         "gold_currency_movement": movement,
         "gold_weekly_currency_summary": weekly,
         "gold_strength_rankings": ranking,

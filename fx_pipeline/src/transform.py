@@ -1,7 +1,6 @@
 import json
 import logging
 from pathlib import Path
-
 import pandas as pd
 
 from src.quality import validate_bronze_file, validate_silver_data
@@ -9,7 +8,7 @@ from src.quality import validate_bronze_file, validate_silver_data
 logger = logging.getLogger(__name__)
 
 def read_bronze_files(config):
-    bronze_path = (Path(config.get("_project_root", ".")) / config["data"]["bronze_path"]).resolve()
+    bronze_path = (Path(config.get("_project_root", ".")) / config["paths"]["bronze"]).resolve()
     return sorted(bronze_path.glob("*.json"))
 
 def transform_record(bronze_json):
@@ -38,6 +37,7 @@ def transform_record(bronze_json):
 
 def transform_data(config):
     """Transform all Bronze files into Silver tables."""
+
     logger.info("Reading Bronze files")
     files = read_bronze_files(config)
     logger.info("Found %s Bronze files", len(files))
@@ -62,6 +62,7 @@ def transform_data(config):
     df = df.sort_values(
         by=["rate_date", "base_currency", "target_currency", "ingestion_time"]
     )
+
     df = df.drop_duplicates(
         subset=["rate_date", "base_currency", "target_currency"], keep="last"
     ).reset_index(drop=True)
@@ -73,7 +74,7 @@ def transform_data(config):
 
 def save_silver(df, config):
     logger.info("Saving %s records to Silver layer", len(df))
-    silver_path = (Path(config.get("_project_root", ".")) / config["data"]["silver_path"]).resolve()
+    silver_path = (Path(config.get("_project_root", ".")) / config["paths"]["silver"]).resolve()
     silver_path.mkdir(parents=True, exist_ok=True)
     output_file = silver_path / "exchange_rates.parquet"
     df.to_parquet(output_file, index=False)
