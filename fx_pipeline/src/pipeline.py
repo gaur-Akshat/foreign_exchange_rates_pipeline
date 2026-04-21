@@ -9,12 +9,12 @@ from src.logger import setup_logging
 logger = logging.getLogger(__name__)
 
 def apply_retention(df, days):
-    import pandas as pd
+    import pandas as p
 
     if not days:
         return df
 
-    cutoff = pd.Timestamp.today().normalize() - pd.Timedelta(days=days - 1)
+    cutoff = p.Timestamp.today().normalize() - p.Timedelta(days=days - 1)
     return df[df["rate_date"] >= cutoff].reset_index(drop=True)
 
 
@@ -54,13 +54,12 @@ def run_pipeline(config):
         # sql load
         if config.get("database", {}).get("enabled", False):
             from src.db import create_database_if_not_exists
-            from src.load import load_to_sql, load_gold_to_sql
+            from src.load import load_gold_to_sql
             
             try:
                 logger.info("Ensuring database exists")
                 create_database_if_not_exists()
                 logger.info("Loading data to SQL Server")
-                load_to_sql(df, config)
                 load_gold_to_sql(gold_data, config)
             except Exception as exc:
                 logger.warning(f"Could not connect to SQL server. Skipping database load. Reason: {exc}")

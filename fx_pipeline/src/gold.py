@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as p
 import os
 import logging
 
@@ -29,7 +29,7 @@ def currency_movement(df):
 def weekly_summary(df):
     df = df.sort_values(["target_currency", "rate_date"])
     latest_date = df["rate_date"].max()
-    last_7_days = df[df["rate_date"] >= latest_date - pd.Timedelta(days=6)]
+    last_7_days = df[df["rate_date"] >= latest_date - p.Timedelta(days=6)]
 
     summary = last_7_days.groupby("target_currency").agg(
         weekly_avg=("exchange_rate", "mean"),
@@ -63,7 +63,7 @@ def conversion_table(df):
                 "converted_amount": u * row["exchange_rate"],
             })
 
-    return pd.DataFrame(rows)
+    return p.DataFrame(rows)
 
 def run_gold_layer(df, config):
     logger.info("Running Gold Layer")
@@ -82,9 +82,14 @@ def run_gold_layer(df, config):
         "gold_strength_rankings": ranking,
         "gold_conversion_reference": conversion,
     }
+    excel_folder = os.path.join(gold_path, "excel")
+    os.makedirs(excel_folder, exist_ok=True)
+
     for name, data in datasets.items():
-        path = os.path.join(gold_path, f"{name}.parquet")
-        data.to_parquet(path, index=False)
-        logger.info(f"Saved {name}")
+        parquet_path = os.path.join(gold_path, f"{name}.parquet")
+        data.to_parquet(parquet_path, index=False)
+        excel_path = os.path.join(excel_folder, f"{name}.xlsx")
+        data.to_excel(excel_path, index=False)
+    logger.info(f"Saved {name} (Parquet and Excel) to {gold_path}")
 
     return datasets

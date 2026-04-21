@@ -8,3 +8,7 @@ data/logs/
 data/bronze/*
 !data/bronze/.gitkeep
 .pytest_cache/
+data/silver/*
+!data/silver/.gitkeep
+data/gold/*
+!data/gold/.gitkeep

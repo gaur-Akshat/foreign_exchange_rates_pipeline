@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as p
 import json
 from pathlib import Path
 
@@ -23,7 +23,7 @@ def get_latest_bronze_date(bronze_path):
         with open(file, "r") as f:
             data = json.load(f)
         if "date" in data:
-            current_date = pd.to_datetime(data["date"]).date()
+            current_date = p.to_datetime(data["date"]).date()
 
             if latest_date is None or current_date > latest_date:
                 latest_date = current_date

@@ -1,7 +1,7 @@
 import json
 import logging
 from pathlib import Path
-import pandas as pd
+import pandas as p
 
 from src.quality import validate_bronze_file, validate_silver_data
 
@@ -14,7 +14,7 @@ def read_bronze_files(config):
 def transform_record(bronze_json):
     rows = []
 
-    metadata = bronze_json.get("metadata", {})
+    metadata = bronze_json["metadata"]
     payload = bronze_json["data"]
 
     base_currency = payload["base"]
@@ -27,10 +27,10 @@ def transform_record(bronze_json):
             "base_currency": base_currency,
             "target_currency": currency,
             "exchange_rate": rate,
-            "ingestion_time": metadata.get("ingestion_time"),
+            "ingestion_time": metadata["ingestion_time"],
             "load_batch_id": metadata.get("load_batch_id") or metadata.get("batch_id"),
-            "endpoint_name": metadata.get("endpoint"),
-            "response_status": metadata.get("status"),
+            "endpoint_name": metadata["endpoint"],
+            "response_status": metadata["status"],
         })
 
     return rows
@@ -55,10 +55,10 @@ def transform_data(config):
 
         all_rows.extend(transform_record(bronze_json))
 
-    df = pd.DataFrame(all_rows)
-    df["rate_date"] = pd.to_datetime(df["rate_date"]).dt.normalize()
-    df["ingestion_time"] = pd.to_datetime(df["ingestion_time"])
-    df["exchange_rate"] = pd.to_numeric(df["exchange_rate"])
+    df = p.DataFrame(all_rows)
+    df["rate_date"] = p.to_datetime(df["rate_date"]).dt.normalize()
+    df["ingestion_time"] = p.to_datetime(df["ingestion_time"])
+    df["exchange_rate"] = p.to_numeric(df["exchange_rate"])
     df = df.sort_values(
         by=["rate_date", "base_currency", "target_currency", "ingestion_time"]
     )

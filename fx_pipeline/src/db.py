@@ -10,7 +10,6 @@ def create_database_if_not_exists():
     server = os.getenv("DB_SERVER", "localhost")
     database = os.getenv("DB_NAME")
 
-    # Connect to MySQL root to create the target database if it doesn't exist
     sys_conn = f"mysql+mysqlconnector://{username}:{password}@{server}/"
     engine = create_engine(sys_conn)
 
@@ -26,7 +25,6 @@ def get_engine():
     password = os.getenv("DB_PASSWORD", "")
     server = os.getenv("DB_SERVER", "localhost")
     database = os.getenv("DB_NAME")
-
     connection_string = f"mysql+mysqlconnector://{username}:{password}@{server}/{database}"
     
     return create_engine(connection_string)

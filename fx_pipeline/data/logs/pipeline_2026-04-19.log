@@ -1,0 +1,71 @@
+2026-04-19 14:36:19,125 - src.pipeline - INFO - Pipeline started
+2026-04-19 14:36:19,126 - src.pipeline - INFO - Extracting data from 2026-03-21 to 2026-04-19
+2026-04-19 14:36:19,126 - src.extract - INFO - Starting extraction process
+2026-04-19 14:36:19,126 - src.extract - INFO - Fetching historical data from 2026-03-21 to 2026-04-19
+2026-04-19 14:36:20,385 - src.pipeline - INFO - Transforming data
+2026-04-19 14:36:20,385 - src.transform - INFO - Reading Bronze files
+2026-04-19 14:36:20,387 - src.transform - INFO - Found 19 Bronze files
+2026-04-19 14:36:20,534 - src.pipeline - INFO - Applying retention policy
+2026-04-19 14:36:20,536 - src.transform - INFO - Saving 108 records to Silver layer
+2026-04-19 14:36:20,706 - src.pipeline - INFO - Processing Gold layer
+2026-04-19 14:36:20,706 - src.gold - INFO - Running Gold Layer
+2026-04-19 14:36:20,730 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-19 14:36:20,734 - src.gold - INFO - Saved gold_currency_movement
+2026-04-19 14:36:20,737 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-19 14:36:20,741 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-19 14:36:20,744 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-19 14:36:21,102 - src.pipeline - INFO - Ensuring database exists
+2026-04-19 14:36:21,423 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-19 14:36:21,749 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-19 15:18:41,548 - src.pipeline - INFO - Pipeline started
+2026-04-19 15:18:41,548 - src.pipeline - INFO - Extracting data from 2026-03-21 to 2026-04-19
+2026-04-19 15:18:41,549 - src.extract - INFO - Starting extraction process
+2026-04-19 15:18:41,549 - src.extract - INFO - Fetching historical data from 2026-03-21 to 2026-04-19
+2026-04-19 15:18:42,121 - src.pipeline - INFO - Transforming data
+2026-04-19 15:18:42,122 - src.transform - INFO - Reading Bronze files
+2026-04-19 15:18:42,122 - src.transform - INFO - Found 19 Bronze files
+2026-04-19 15:18:42,269 - src.pipeline - INFO - Applying retention policy
+2026-04-19 15:18:42,272 - src.transform - INFO - Saving 108 records to Silver layer
+2026-04-19 15:18:42,442 - src.pipeline - INFO - Processing Gold layer
+2026-04-19 15:18:42,442 - src.gold - INFO - Running Gold Layer
+2026-04-19 15:18:42,471 - src.pipeline - ERROR - Pipeline failed: No module named 'openpyxl'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 52, in run_pipeline
+    gold_data = run_gold_layer(df, config)
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\gold.py", line 92, in run_gold_layer
+    data.to_excel(excel_path, index=False)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\pandas\core\generic.py", line 2312, in to_excel
+    formatter.write(
+    ~~~~~~~~~~~~~~~^
+        excel_writer,
+        ^^^^^^^^^^^^^
+    ...<6 lines>...
+        engine_kwargs=engine_kwargs,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\pandas\io\formats\excel.py", line 1003, in write
+    writer = ExcelWriter(
+        writer,
+    ...<2 lines>...
+        engine_kwargs=engine_kwargs,
+    )
+  File "E:\Data_Engineering_First_Year_Project\.venv\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 58, in __init__
+    from openpyxl.workbook import Workbook
+ModuleNotFoundError: No module named 'openpyxl'
+2026-04-19 15:20:27,906 - src.pipeline - INFO - Pipeline started
+2026-04-19 15:20:27,906 - src.pipeline - INFO - Extracting data from 2026-03-21 to 2026-04-19
+2026-04-19 15:20:27,906 - src.extract - INFO - Starting extraction process
+2026-04-19 15:20:27,907 - src.extract - INFO - Fetching historical data from 2026-03-21 to 2026-04-19
+2026-04-19 15:20:28,474 - src.pipeline - INFO - Transforming data
+2026-04-19 15:20:28,475 - src.transform - INFO - Reading Bronze files
+2026-04-19 15:20:28,475 - src.transform - INFO - Found 19 Bronze files
+2026-04-19 15:20:28,613 - src.pipeline - INFO - Applying retention policy
+2026-04-19 15:20:28,615 - src.transform - INFO - Saving 108 records to Silver layer
+2026-04-19 15:20:28,633 - src.pipeline - INFO - Processing Gold layer
+2026-04-19 15:20:28,634 - src.gold - INFO - Running Gold Layer
+2026-04-19 15:20:29,131 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to data/gold/marts
+2026-04-19 15:20:29,471 - src.pipeline - INFO - Ensuring database exists
+2026-04-19 15:20:29,680 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-19 15:20:29,898 - src.pipeline - INFO - Pipeline completed successfully

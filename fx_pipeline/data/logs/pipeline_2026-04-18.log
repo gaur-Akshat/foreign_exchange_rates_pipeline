@@ -56,3 +56,79 @@
 2026-04-18 00:13:05,147 - src.pipeline - INFO - Ensuring database exists
 2026-04-18 00:13:05,382 - src.pipeline - INFO - Loading data to SQL Server
 2026-04-18 00:13:05,622 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-18 18:58:24,511 - src.pipeline - INFO - Pipeline started
+2026-04-18 18:58:24,512 - src.pipeline - INFO - Extracting data from 2026-03-20 to 2026-04-18
+2026-04-18 18:58:24,513 - src.extract - INFO - Starting extraction process
+2026-04-18 18:58:24,513 - src.extract - INFO - Fetching historical data from 2026-03-20 to 2026-04-18
+2026-04-18 18:58:25,967 - src.pipeline - INFO - Transforming data
+2026-04-18 18:58:25,967 - src.transform - INFO - Reading Bronze files
+2026-04-18 18:58:25,968 - src.transform - INFO - Found 22 Bronze files
+2026-04-18 18:58:26,138 - src.pipeline - INFO - Applying retention policy
+2026-04-18 18:58:26,140 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-18 18:58:26,327 - src.pipeline - INFO - Processing Gold layer
+2026-04-18 18:58:26,327 - src.gold - INFO - Running Gold Layer
+2026-04-18 18:58:26,350 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-18 18:58:26,355 - src.gold - INFO - Saved gold_currency_movement
+2026-04-18 18:58:26,359 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-18 18:58:26,362 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-18 18:58:26,364 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-18 18:58:26,735 - src.pipeline - INFO - Ensuring database exists
+2026-04-18 18:58:27,001 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-18 18:58:27,303 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-18 19:07:47,683 - src.pipeline - INFO - Pipeline started
+2026-04-18 19:07:47,683 - src.pipeline - INFO - Extracting data from 2026-03-20 to 2026-04-18
+2026-04-18 19:07:47,683 - src.extract - INFO - Starting extraction process
+2026-04-18 19:07:47,684 - src.extract - INFO - Fetching historical data from 2026-03-20 to 2026-04-18
+2026-04-18 19:07:48,492 - src.pipeline - INFO - Transforming data
+2026-04-18 19:07:48,493 - src.transform - INFO - Reading Bronze files
+2026-04-18 19:07:48,494 - src.transform - INFO - Found 22 Bronze files
+2026-04-18 19:07:48,654 - src.pipeline - INFO - Applying retention policy
+2026-04-18 19:07:48,655 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-18 19:07:48,818 - src.pipeline - INFO - Processing Gold layer
+2026-04-18 19:07:48,818 - src.gold - INFO - Running Gold Layer
+2026-04-18 19:07:48,838 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-18 19:07:48,841 - src.gold - INFO - Saved gold_currency_movement
+2026-04-18 19:07:48,844 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-18 19:07:48,848 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-18 19:07:48,850 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-18 19:07:49,139 - src.pipeline - INFO - Ensuring database exists
+2026-04-18 19:07:49,334 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-18 19:07:49,579 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-18 19:08:45,338 - src.pipeline - INFO - Pipeline started
+2026-04-18 19:08:45,338 - src.pipeline - INFO - Extracting data from 2026-03-20 to 2026-04-18
+2026-04-18 19:08:45,338 - src.extract - INFO - Starting extraction process
+2026-04-18 19:08:45,339 - src.extract - INFO - Fetching historical data from 2026-03-20 to 2026-04-18
+2026-04-18 19:08:46,089 - src.pipeline - INFO - Transforming data
+2026-04-18 19:08:46,089 - src.transform - INFO - Reading Bronze files
+2026-04-18 19:08:46,090 - src.transform - INFO - Found 19 Bronze files
+2026-04-18 19:08:46,244 - src.pipeline - INFO - Applying retention policy
+2026-04-18 19:08:46,247 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-18 19:08:46,296 - src.pipeline - INFO - Processing Gold layer
+2026-04-18 19:08:46,297 - src.gold - INFO - Running Gold Layer
+2026-04-18 19:08:46,325 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-18 19:08:46,330 - src.gold - INFO - Saved gold_currency_movement
+2026-04-18 19:08:46,334 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-18 19:08:46,338 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-18 19:08:46,341 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-18 19:08:46,543 - src.pipeline - INFO - Ensuring database exists
+2026-04-18 19:08:46,671 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-18 19:08:46,942 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-18 19:41:09,571 - src.pipeline - INFO - Pipeline started
+2026-04-18 19:41:09,571 - src.pipeline - INFO - Extracting data from 2026-03-20 to 2026-04-18
+2026-04-18 19:41:09,575 - src.extract - INFO - Starting extraction process
+2026-04-18 19:41:09,575 - src.extract - INFO - Fetching historical data from 2026-03-20 to 2026-04-18
+2026-04-18 19:41:10,930 - src.pipeline - INFO - Transforming data
+2026-04-18 19:41:10,930 - src.transform - INFO - Reading Bronze files
+2026-04-18 19:41:10,931 - src.transform - INFO - Found 19 Bronze files
+2026-04-18 19:41:11,062 - src.pipeline - INFO - Applying retention policy
+2026-04-18 19:41:11,066 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-18 19:41:11,255 - src.pipeline - INFO - Processing Gold layer
+2026-04-18 19:41:11,255 - src.gold - INFO - Running Gold Layer
+2026-04-18 19:41:11,269 - src.gold - INFO - Saved gold_daily_currency_rates
+2026-04-18 19:41:11,273 - src.gold - INFO - Saved gold_currency_movement
+2026-04-18 19:41:11,274 - src.gold - INFO - Saved gold_weekly_currency_summary
+2026-04-18 19:41:11,276 - src.gold - INFO - Saved gold_strength_rankings
+2026-04-18 19:41:11,278 - src.gold - INFO - Saved gold_conversion_reference
+2026-04-18 19:41:11,683 - src.pipeline - INFO - Ensuring database exists
+2026-04-18 19:41:11,827 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-18 19:41:12,122 - src.pipeline - INFO - Pipeline completed successfully
