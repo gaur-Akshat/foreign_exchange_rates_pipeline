@@ -1,6 +1,7 @@
 import requests
 import json
-import os
+
+from pathlib import Path
 from datetime import datetime
 
 import logging
@@ -17,7 +18,7 @@ def fetch_latest(config):
     base = config['base_currency']
     target = ",".join(config['target_currencies'])
 
-    response = requests.get(f"{url}?from={base}&symbols={target}", timeout=10)
+    response = requests.get(f"{url}?from={base}&symbols={target}", timeout=config['api']['timeout'])
     response.raise_for_status()
     return response
 
@@ -30,7 +31,7 @@ def fetch_historical(config, start_date, end_date):
     retries = 3
     for attempt in range(retries):
         try:
-            response = requests.get(url, timeout=30)
+            response = requests.get(url, timeout=config['api']['timeout'])
             response.raise_for_status()
             return response
         except Exception as e:
@@ -40,12 +41,10 @@ def fetch_historical(config, start_date, end_date):
     raise Exception("Failed to fetch historical data after retries")
 
 def save_bronze(data, metadata, config, date_str):
-    bronze_path = config["paths"]["bronze"]
-    os.makedirs(bronze_path, exist_ok=True)
+    bronze_path = (Path(config.get("_project_root", ".")) / config["paths"]["bronze"]).resolve()
+    bronze_path.mkdir(parents=True, exist_ok=True)
 
-    filename = os.path.join(bronze_path, f"exchange_rates_{date_str}.json")
-
-    with open(filename, "w") as f:
+    with open(bronze_path / f"exchange_rates_{date_str}.json", "w") as f:
         json.dump({"metadata": metadata, "data": data}, f, indent=2)
 
 

@@ -1,0 +1,26 @@
+2026-04-21 13:21:16,780 - src.pipeline - INFO - Pipeline started
+2026-04-21 13:21:16,780 - src.pipeline - INFO - Extracting data from 2026-03-23 to 2026-04-21
+2026-04-21 13:21:16,780 - src.extract - INFO - Starting extraction process
+2026-04-21 13:21:16,780 - src.extract - INFO - Fetching historical data from 2026-03-23 to 2026-04-21
+2026-04-21 13:21:18,670 - src.transform - INFO - Found 20 Bronze files
+2026-04-21 13:21:18,978 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-21 13:21:19,340 - src.pipeline - INFO - Processing Gold layer
+2026-04-21 13:21:19,340 - src.gold - INFO - Running Gold Layer
+2026-04-21 13:21:19,399 - src.pipeline - ERROR - Pipeline failed: No module named 'openpyxl'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 40, in run_pipeline
+    gold_data = run_gold_layer(df, config)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\gold.py", line 63, in run_gold_layer
+    data.to_excel(excel_folder / f"{name}.xlsx", index=False)
+  File "C:\Users\Aksha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aksha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 2439, in to_excel
+    formatter.write(
+  File "C:\Users\Aksha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\formats\excel.py", line 943, in write
+    writer = ExcelWriter(
+             ^^^^^^^^^^^^
+  File "C:\Users\Aksha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 57, in __init__
+    from openpyxl.workbook import Workbook
+ModuleNotFoundError: No module named 'openpyxl'

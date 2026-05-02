@@ -1,0 +1,186 @@
+2026-04-22 12:40:13,544 - src.pipeline - INFO - Pipeline started
+2026-04-22 12:40:13,544 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 12:40:13,545 - src.extract - INFO - Starting extraction process
+2026-04-22 12:40:13,545 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 12:40:14,874 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 12:40:15,005 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 12:40:15,041 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 12:40:15,041 - src.gold - INFO - Running Gold Layer
+2026-04-22 12:40:15,393 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 12:40:15,578 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 12:40:15,659 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-22 12:40:15,863 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 12:42:41,705 - src.pipeline - INFO - Pipeline started
+2026-04-22 12:42:41,705 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 12:42:41,706 - src.extract - INFO - Starting extraction process
+2026-04-22 12:42:41,706 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 12:42:42,458 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 12:42:42,584 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 12:42:42,600 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 12:42:42,600 - src.gold - INFO - Running Gold Layer
+2026-04-22 12:42:42,936 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 12:42:43,117 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 12:42:43,196 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-22 12:42:43,396 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 12:44:13,195 - src.pipeline - INFO - Pipeline started
+2026-04-22 12:44:13,196 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 12:44:13,196 - src.extract - INFO - Starting extraction process
+2026-04-22 12:44:13,196 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 12:44:14,485 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 12:44:14,619 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 12:44:14,637 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 12:44:14,637 - src.gold - INFO - Running Gold Layer
+2026-04-22 12:44:14,992 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 12:44:15,160 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 12:44:15,234 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-22 12:44:15,424 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 12:44:21,071 - src.pipeline - INFO - Pipeline started
+2026-04-22 12:44:21,071 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 12:44:21,071 - src.extract - INFO - Starting extraction process
+2026-04-22 12:44:21,071 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 12:44:22,332 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 12:44:22,475 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 12:44:22,492 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 12:44:22,492 - src.gold - INFO - Running Gold Layer
+2026-04-22 12:44:22,832 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 12:44:23,100 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 12:44:23,176 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-22 12:44:23,392 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 12:49:49,808 - src.pipeline - INFO - Pipeline started
+2026-04-22 12:49:49,808 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 12:49:49,809 - src.extract - INFO - Starting extraction process
+2026-04-22 12:49:49,809 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 12:49:51,199 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 12:49:51,325 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 12:49:51,347 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 12:49:51,347 - src.gold - INFO - Running Gold Layer
+2026-04-22 12:49:51,692 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 12:49:51,874 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 12:49:51,948 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-22 12:49:52,175 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 12:52:20,896 - src.pipeline - INFO - Pipeline started
+2026-04-22 12:52:20,896 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 12:52:20,897 - src.extract - INFO - Starting extraction process
+2026-04-22 12:52:20,897 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 12:52:22,162 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 12:52:22,300 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 12:52:22,316 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 12:52:22,316 - src.gold - INFO - Running Gold Layer
+2026-04-22 12:52:22,670 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 12:52:22,852 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 12:52:22,959 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-22 12:52:23,207 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 12:53:46,748 - src.pipeline - INFO - Pipeline started
+2026-04-22 12:53:46,749 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 12:53:46,749 - src.extract - INFO - Starting extraction process
+2026-04-22 12:53:46,749 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 12:53:47,383 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 12:53:47,503 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 12:53:47,518 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 12:53:47,518 - src.gold - INFO - Running Gold Layer
+2026-04-22 12:53:47,896 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 12:53:48,081 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 12:53:48,163 - src.pipeline - INFO - Loading data to SQL Server
+2026-04-22 12:53:48,358 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 13:28:34,596 - src.pipeline - INFO - Pipeline started
+2026-04-22 13:28:34,596 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 13:28:34,596 - src.extract - INFO - Starting extraction process
+2026-04-22 13:28:34,596 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 13:28:35,401 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 13:28:35,547 - src.transform - INFO - Saving Bronze SQL layer
+2026-04-22 13:28:35,768 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 13:28:35,776 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 13:28:35,776 - src.gold - INFO - Running Gold Layer
+2026-04-22 13:28:35,796 - src.pipeline - ERROR - Pipeline failed: No module named 'openpyxl'
+Traceback (most recent call last):
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\pipeline.py", line 40, in run_pipeline
+    gold_data = run_gold_layer(df, config)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\src\gold.py", line 72, in run_gold_layer
+    data.to_excel(excel_folder / f"{name}.xlsx", index=False)
+  File "C:\Users\Aksha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Aksha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\core\generic.py", line 2439, in to_excel
+    formatter.write(
+  File "C:\Users\Aksha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\formats\excel.py", line 943, in write
+    writer = ExcelWriter(
+             ^^^^^^^^^^^^
+  File "C:\Users\Aksha\AppData\Local\Programs\Python\Python312\Lib\site-packages\pandas\io\excel\_openpyxl.py", line 57, in __init__
+    from openpyxl.workbook import Workbook
+ModuleNotFoundError: No module named 'openpyxl'
+2026-04-22 13:28:54,718 - src.pipeline - INFO - Pipeline started
+2026-04-22 13:28:54,718 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 13:28:54,718 - src.extract - INFO - Starting extraction process
+2026-04-22 13:28:54,718 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 13:28:55,495 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 13:28:55,610 - src.transform - INFO - Saving Bronze SQL layer
+2026-04-22 13:28:55,640 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 13:28:55,643 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 13:28:55,643 - src.gold - INFO - Running Gold Layer
+2026-04-22 13:28:56,038 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 13:28:56,513 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 13:28:56,681 - src.pipeline - INFO - Loading Bronze to SQL Server
+2026-04-22 13:28:57,158 - src.pipeline - INFO - Loading Silver to SQL Server
+2026-04-22 13:28:57,191 - src.pipeline - INFO - Loading Gold to SQL Server
+2026-04-22 13:28:57,401 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 13:32:14,611 - src.pipeline - INFO - Pipeline started
+2026-04-22 13:32:14,612 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 13:32:14,612 - src.extract - INFO - Starting extraction process
+2026-04-22 13:32:14,612 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 13:32:16,104 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 13:32:16,245 - src.transform - INFO - Saving Bronze SQL layer
+2026-04-22 13:32:16,462 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 13:32:16,465 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 13:32:16,466 - src.gold - INFO - Running Gold Layer
+2026-04-22 13:32:16,918 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 13:32:17,320 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 13:32:17,586 - src.pipeline - INFO - Loading Bronze to SQL Server
+2026-04-22 13:32:18,044 - src.pipeline - INFO - Loading Silver to SQL Server
+2026-04-22 13:32:18,117 - src.pipeline - INFO - Loading Gold to SQL Server
+2026-04-22 13:32:18,356 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 13:34:29,254 - src.pipeline - INFO - Pipeline started
+2026-04-22 13:34:29,254 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 13:34:29,254 - src.extract - INFO - Starting extraction process
+2026-04-22 13:34:29,254 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 13:34:30,598 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 13:34:30,719 - src.transform - INFO - Saving Bronze SQL layer
+2026-04-22 13:34:30,895 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 13:34:30,899 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 13:34:30,899 - src.gold - INFO - Running Gold Layer
+2026-04-22 13:34:31,318 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 13:34:31,701 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 13:34:31,781 - src.pipeline - INFO - Loading Bronze to SQL Server
+2026-04-22 13:34:32,218 - src.pipeline - INFO - Loading Silver to SQL Server
+2026-04-22 13:34:32,268 - src.pipeline - INFO - Loading Gold to SQL Server
+2026-04-22 13:34:32,462 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 13:34:58,225 - src.pipeline - INFO - Pipeline started
+2026-04-22 13:34:58,226 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 13:34:58,226 - src.extract - INFO - Starting extraction process
+2026-04-22 13:34:58,226 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 13:34:58,893 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 13:34:59,008 - src.transform - INFO - Saving Bronze SQL layer
+2026-04-22 13:34:59,037 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 13:34:59,040 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 13:34:59,040 - src.gold - INFO - Running Gold Layer
+2026-04-22 13:34:59,378 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 13:34:59,563 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 13:34:59,643 - src.pipeline - INFO - Loading Bronze to SQL Server
+2026-04-22 13:34:59,725 - src.pipeline - INFO - Loading Silver to SQL Server
+2026-04-22 13:34:59,774 - src.pipeline - INFO - Loading Gold to SQL Server
+2026-04-22 13:34:59,964 - src.pipeline - INFO - Pipeline completed successfully
+2026-04-22 13:40:39,978 - src.pipeline - INFO - Pipeline started
+2026-04-22 13:40:39,978 - src.pipeline - INFO - Extracting data from 2026-03-24 to 2026-04-22
+2026-04-22 13:40:39,979 - src.extract - INFO - Starting extraction process
+2026-04-22 13:40:39,979 - src.extract - INFO - Fetching historical data from 2026-03-24 to 2026-04-22
+2026-04-22 13:40:40,646 - src.transform - INFO - Found 21 Bronze files
+2026-04-22 13:40:40,775 - src.transform - INFO - Saving Bronze SQL layer
+2026-04-22 13:40:40,806 - src.transform - INFO - Saving 114 records to Silver layer
+2026-04-22 13:40:40,810 - src.pipeline - INFO - Processing Gold layer
+2026-04-22 13:40:40,810 - src.gold - INFO - Running Gold Layer
+2026-04-22 13:40:41,132 - src.gold - INFO - Saved gold_conversion_reference (Parquet and Excel) to E:\Data_Engineering_First_Year_Project\foreign_exchange_rates_pipeline\fx_pipeline\data\gold\marts
+2026-04-22 13:40:41,318 - src.pipeline - INFO - Ensuring database exists
+2026-04-22 13:40:41,403 - src.pipeline - INFO - Loading Bronze to SQL Server
+2026-04-22 13:40:41,512 - src.pipeline - INFO - Loading Silver to SQL Server
+2026-04-22 13:40:41,560 - src.pipeline - INFO - Loading Gold to SQL Server
+2026-04-22 13:40:41,752 - src.pipeline - INFO - Pipeline completed successfully

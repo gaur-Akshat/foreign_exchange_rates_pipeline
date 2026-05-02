@@ -29,7 +29,7 @@ Frankfurter API
   [ GOLD ]      →  Gold Layer    (5 analytics Parquet marts)
       │
       ▼
-  [ LOAD ]      →  MySQL Database (Silver + Gold tables)
+  [ LOAD ]      →  MySQL Database (Gold tables only)
       │
       ▼
   [ LOGS ]      →  data/logs/pipeline_YYYY-MM-DD.log
@@ -44,11 +44,11 @@ Frankfurter API
 ## Project Structure
 
 ```text
+.gitignore
+
 fx_pipeline/
 ├── config.yaml               ← pipeline configuration
 ├── main.py                   ← entry point
-├── scheduler.bat             ← Windows Task Scheduler automation
-├── explanation.md            ← full code walkthrough
 ├── requirements.txt
 ├── data/
 │   ├── bronze/
@@ -56,24 +56,19 @@ fx_pipeline/
 │   ├── silver/
 │   │   └── exchange_rates/   ← exchange_rates.parquet
 │   ├── gold/
-│   │   └── marts/            ← 5 analytics Parquet files
+│   │   └── marts/            ← 5 analytics Parquet + Excel files
+│   │       ├── excel/
 │   └── logs/                 ← pipeline_YYYY-MM-DD.log
-├── notebooks/
-│   └── gold_reporting.ipynb  ← interactive reporting dashboard
-├── src/
-│   ├── extract.py            ← API ingestion → Bronze
-│   ├── transform.py          ← Bronze → Silver
-│   ├── quality.py            ← Bronze + Silver validation
-│   ├── gold.py               ← Silver → Gold marts
-│   ├── load.py               ← Gold + Silver → MySQL
-│   ├── db.py                 ← MySQL engine + DB initialisation
-│   ├── pipeline.py           ← orchestrator
-│   └── logger.py             ← logging setup
-└── tests/
-    ├── test_gold.py
-    └── test_quality.py
+└── src/
+    ├── extract.py            ← API ingestion → Bronze
+    ├── transform.py          ← Bronze → Silver
+    ├── quality.py            ← Bronze + Silver validation
+    ├── gold.py               ← Silver → Gold marts
+    ├── load.py               ← Gold → MySQL
+    ├── db.py                 ← MySQL engine + DB initialisation
+    ├── pipeline.py           ← orchestrator
+    └── logger.py             ← logging setup
 ```
-
 ---
 
 ## Gold Outputs
@@ -150,7 +145,7 @@ pipeline:
   retention_days: 30
 
 database:
-  enabled: false          # set to true to load into MySQL
+  enabled: true
   silver_table: "silver_exchange_rates"
 
 logging:
@@ -191,41 +186,13 @@ Re-runs transformation and Gold from existing Bronze files — no API call made.
 
 ## MySQL Database Loading
 
-SQL loading is **disabled by default**. To enable:
-
-1. Set `database.enabled: true` in `config.yaml`
-2. Fill in your credentials in `.env`
-3. Ensure MySQL Server is running on your machine
-4. Run `python main.py`
+SQL loading is **enabled by default**.
 
 The pipeline will automatically:
 - Create the database (`fx_rates`) if it doesn't exist
-- Append new rows to `silver_exchange_rates`
 - Fully replace each Gold table on every run
 
 > If MySQL is unavailable, the pipeline logs a warning and completes successfully without crashing.
-
----
-
-## Scheduling (Windows)
-
-A `scheduler.bat` script is included to automate daily runs via **Windows Task Scheduler**:
-
-1. Open **Windows Task Scheduler**
-2. Create a **Basic Task** → set trigger to **Daily**
-3. Action: **Start a program** → browse and select `scheduler.bat`
-4. Set **"Start in"** to the absolute path of the `fx_pipeline/` directory
-
-The script activates the virtual environment, runs the pipeline, and appends all output to `data/logs/scheduler.log`.
-
----
-
-## Reporting
-
-Open `notebooks/gold_reporting.ipynb` in Jupyter to:
-- Browse all Gold mart DataFrames interactively
-- View weekly performance rankings
-- Plot exchange rate movements over time as a line chart
 
 ---
 
@@ -252,5 +219,3 @@ Exchange rate data is sourced from the **Frankfurter API** — a free, open-sour
 | `CREATE DATABASE IF NOT EXISTS` | No manual DB setup needed on first run |
 
 ---
-
-> For a full line-by-line code walkthrough, see [`explanation.md`](./explanation.md).

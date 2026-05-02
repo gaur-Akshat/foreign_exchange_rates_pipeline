@@ -14,6 +14,7 @@ api:
 
 paths:
   bronze: "data/bronze/exchange_rates"
+  bronze_sql: "data/bronze/bronze_sql"
   silver: "data/silver/exchange_rates"
   gold: "data/gold/marts"
   logs: "data/logs"
@@ -24,6 +25,7 @@ pipeline:
 
 database:
   enabled: true
+  bronze_table: "bronze_exchange_rates"
   silver_table: "silver_exchange_rates"
 
 logging:
